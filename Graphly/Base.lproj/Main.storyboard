@@ -709,6 +709,9 @@
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="jsB-i5-n8y">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <connections>
+                                    <segue destination="DBm-06-ymk" kind="embed" id="9Es-x6-uhw"/>
+                                </connections>
                             </containerView>
                         </subviews>
                         <constraints>
@@ -721,7 +724,46 @@
                 </viewController>
                 <customObject id="B97-vS-tt6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819" y="406"/>
+            <point key="canvasLocation" x="637" y="877"/>
+        </scene>
+        <!--Heat Map View Controller-->
+        <scene sceneID="EFa-Wo-4nR">
+            <objects>
+                <viewController id="rjD-3U-V74" customClass="HeatMapViewController" sceneMemberID="viewController">
+                    <view key="view" id="QrY-RJ-oVd">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="d5x-82-DBu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479" y="-26"/>
+        </scene>
+        <!--Scatter View Controller-->
+        <scene sceneID="Cf7-8D-oib">
+            <objects>
+                <viewController id="8Rq-PR-DPd" customClass="ScatterViewController" sceneMemberID="viewController">
+                    <view key="view" id="9yb-SL-khs">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="obI-za-sW7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="397"/>
+        </scene>
+        <!--Grid Chart View Controller-->
+        <scene sceneID="eww-pV-IJe">
+            <objects>
+                <viewController id="DBm-06-ymk" customClass="GridChartViewController" sceneMemberID="viewController">
+                    <view key="view" id="VpA-ai-A1z">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="7m3-vI-ZMD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1397" y="877"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aU9-cs-LZH">

@@ -2,26 +2,26 @@ PODS:
   - Charts (3.0.4):
     - Charts/Core (= 3.0.4)
   - Charts/Core (3.0.4)
-  - SwiftCSV (0.3.2)
-  - SwiftyBeaver (1.4.3)
   - Swinject (2.1.1)
-  - SwinjectStoryboard (1.1.2):
-    - Swinject (~> 2.1)
 
 DEPENDENCIES:
-  - Charts (~> 3.0)
-  - SwiftCSV
-  - SwiftyBeaver
+  - Charts (from `https://github.com/danielgindi/Charts/`, commit `54171609c2f7d987a46eab60eb0422318d08d266`)
   - Swinject (~> 2.1.1)
-  - SwinjectStoryboard (~> 1.1.2)
+
+EXTERNAL SOURCES:
+  Charts:
+    :commit: 54171609c2f7d987a46eab60eb0422318d08d266
+    :git: https://github.com/danielgindi/Charts/
+
+CHECKOUT OPTIONS:
+  Charts:
+    :commit: 54171609c2f7d987a46eab60eb0422318d08d266
+    :git: https://github.com/danielgindi/Charts/
 
 SPEC CHECKSUMS:
-  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
-  SwiftCSV: 8b64b738fc54567d229acb17ce6d584e0dd27560
-  SwiftyBeaver: e10b1668e0512229c36c34769b97eed3dfae2ca3
+  Charts: c5f4491efc3a24de9213fe3e68484bfdff881cfb
   Swinject: afea49fd95f392b41171669f165842879c48fad6
-  SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 696f72f0185b5c54712fa16f882d37753feae5a9
+PODFILE CHECKSUM: 7dd965faa97a885a79b6e1dada809935e07e113e
 
 COCOAPODS: 1.3.1

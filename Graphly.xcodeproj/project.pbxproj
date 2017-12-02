@@ -10,6 +10,7 @@
 		1AEC85F17AF4D435CC77C30E /* Pods_GraphlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A502FE989DFB63ACD76A6273 /* Pods_GraphlyTests.framework */; };
 		74616B6EB273ED72D8FDCEC5 /* Pods_GraphlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97B2072B8127B99FE2CA52E /* Pods_GraphlyUITests.framework */; };
 		B412621D0AD1932CC70FD024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41269D98DCDA5DFE9C29D17 /* Main.storyboard */; };
+		B4126517A2CB8CD4BD4BFE18 /* Swinject+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4126CD227F8011F4556FAF5 /* Swinject+Setup.swift */; };
 		B412664203E0FEDC0CF9468C /* GraphlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412699F16F40C41B6866382 /* GraphlyTests.swift */; };
 		B41266BBA4DAB1074222A7D9 /* GraphlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41263A5EB58CF276ECAC9CB /* GraphlyUITests.swift */; };
 		B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412643F7A2A7AAEC6A63082 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		B4126943B4B20A03763547DF /* GraphlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B412699F16F40C41B6866382 /* GraphlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphlyTests.swift; sourceTree = "<group>"; };
 		B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4126CD227F8011F4556FAF5 /* Swinject+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swinject+Setup.swift"; sourceTree = "<group>"; };
 		B4126D2148166EE6BF67AD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C0C8B1CC5CAF59970FD66D88 /* Pods-GraphlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.release.xcconfig"; sourceTree = "<group>"; };
 		E05DDE7CC2E51C9561AD6852 /* Pods-GraphlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = GraphlyTests;
 			sourceTree = "<group>";
 		};
+		B41269AA62CF4F1C13BED605 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B4126CD227F8011F4556FAF5 /* Swinject+Setup.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		B4126D03B48A9BED397C9498 /* Graphly */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 				B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */,
 				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
 				B412643F7A2A7AAEC6A63082 /* ViewController.swift */,
+				B41269AA62CF4F1C13BED605 /* DI */,
 			);
 			path = Graphly;
 			sourceTree = "<group>";
@@ -336,18 +347,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Graphly/Pods-Graphly-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftCSV/SwiftCSV.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCSV.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -481,6 +486,7 @@
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
 				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
+				B4126517A2CB8CD4BD4BFE18 /* Swinject+Setup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +677,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.Graphly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.1;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -685,7 +691,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.Graphly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.1;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
