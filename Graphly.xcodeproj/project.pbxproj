@@ -32,7 +32,7 @@
 		F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E21FD31DE3002D237F /* NSViewController+Child.swift */; };
 		F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E51FD32289002D237F /* ControllersInfoProvider.swift */; };
 		F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */; };
-		F24178EA1FD32A5D002D237F /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E91FD32A5D002D237F /* NotificationHelper.swift */; };
+		F24178EA1FD32A5D002D237F /* Notification+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E91FD32A5D002D237F /* Notification+Custom.swift */; };
 		F2B5EE091FD342BB009F123E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE081FD342BB009F123E /* DataProvider.swift */; };
 		F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */; };
 		F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0C1FD3462E009F123E /* ViewModel.swift */; };
@@ -101,7 +101,7 @@
 		F24178E21FD31DE3002D237F /* NSViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Child.swift"; sourceTree = "<group>"; };
 		F24178E51FD32289002D237F /* ControllersInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersInfoProvider.swift; sourceTree = "<group>"; };
 		F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LastClassComponent.swift"; sourceTree = "<group>"; };
-		F24178E91FD32A5D002D237F /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		F24178E91FD32A5D002D237F /* Notification+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Custom.swift"; sourceTree = "<group>"; };
 		F2B5EE081FD342BB009F123E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterViewModel.swift; sourceTree = "<group>"; };
 		F2B5EE0C1FD3462E009F123E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -291,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				F24178E51FD32289002D237F /* ControllersInfoProvider.swift */,
-				F24178E91FD32A5D002D237F /* NotificationHelper.swift */,
 				F2B5EE081FD342BB009F123E /* DataProvider.swift */,
 			);
 			path = Helpers;
@@ -381,6 +380,7 @@
 		F2D36E6D1FD31A320036784E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F24178E91FD32A5D002D237F /* Notification+Custom.swift */,
 				F2D36E6E1FD31A4D0036784E /* NSTableView+Autoregister.swift */,
 				F24178E21FD31DE3002D237F /* NSViewController+Child.swift */,
 				F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */,
@@ -698,7 +698,7 @@
 				F2319CAC1FD35C3E002C422C /* GridChartCollectionViewModel.swift in Sources */,
 				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
 				F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */,
-				F24178EA1FD32A5D002D237F /* NotificationHelper.swift in Sources */,
+				F24178EA1FD32A5D002D237F /* Notification+Custom.swift in Sources */,
 				F2D36E6A1FD3128B0036784E /* MenuTableCellView.swift in Sources */,
 				F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */,
 				F2B5EE091FD342BB009F123E /* DataProvider.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  NotificationHelper.swift
+//  Notification+Custom.swift
 //  Graphly
 //
 //  Created by Marcin Karmelita on 12/2/17.

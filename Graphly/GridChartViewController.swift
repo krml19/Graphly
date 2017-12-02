@@ -15,17 +15,17 @@ class GridChartViewController: NSViewController {
     
     @IBOutlet weak var collectionView: NSCollectionView! {
         didSet {
-            let flowLayout = NSCollectionViewGridLayout()
-       
-            
-//            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+            collectionView.minItemSize = NSSize(width: 200, height: 200)
+            collectionView.maxItemSize = NSSize(width: 1000, height: 1000)
+            // 1
+            let flowLayout = NSCollectionViewFlowLayout()
+            flowLayout.itemSize = NSSize(width: 200, height: 200)
+            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
             flowLayout.minimumInteritemSpacing = 20.0
             flowLayout.minimumLineSpacing = 20.0
             collectionView.collectionViewLayout = flowLayout
             // 2
             view.wantsLayer = true
-//            // 3
-//            collectionView.layer?.backgroundColor = NSColor.black.cgColor
         }
     
     }
@@ -33,8 +33,6 @@ class GridChartViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
     
 }
 
@@ -58,5 +56,5 @@ extension GridChartViewController: NSCollectionViewDataSource {
 
 extension GridChartViewController: NSCollectionViewDelegate {
     
-}
+} 
 

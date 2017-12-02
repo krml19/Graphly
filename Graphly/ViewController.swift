@@ -29,6 +29,7 @@ class ViewController: NSViewController {
     }
     
     func prepareChildViewController(index: Int) {
+        guard index > 0, index < di.resolve(ControllersInfoProvider.self).controllers.count else { return }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.scatter.type {
             displayContentController(content: scatterViewController, containerView: view)
         }

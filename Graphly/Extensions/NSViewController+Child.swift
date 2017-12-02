@@ -22,5 +22,6 @@ extension NSViewController {
         containerView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+        view.layout()
     }
 }
