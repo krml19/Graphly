@@ -736,7 +736,7 @@
         <!--Heat Map View Controller-->
         <scene sceneID="EFa-Wo-4nR">
             <objects>
-                <viewController id="rjD-3U-V74" customClass="HeatMapViewController" sceneMemberID="viewController">
+                <viewController id="rjD-3U-V74" customClass="HeatMapViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="QrY-RJ-oVd">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -749,7 +749,7 @@
         <!--Scatter View Controller-->
         <scene sceneID="Cf7-8D-oib">
             <objects>
-                <viewController id="8Rq-PR-DPd" customClass="ScatterViewController" sceneMemberID="viewController">
+                <viewController id="8Rq-PR-DPd" customClass="ScatterViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="9yb-SL-khs">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -762,7 +762,7 @@
         <!--Grid Chart View Controller-->
         <scene sceneID="eww-pV-IJe">
             <objects>
-                <viewController id="DBm-06-ymk" customClass="GridChartViewController" sceneMemberID="viewController">
+                <viewController id="DBm-06-ymk" customClass="GridChartViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="VpA-ai-A1z">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -775,7 +775,7 @@
         <!--Menu View Controller-->
         <scene sceneID="aU9-cs-LZH">
             <objects>
-                <viewController id="qR4-y8-IVx" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController id="qR4-y8-IVx" customClass="MenuViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="2de-ME-GOz">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -827,6 +827,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="qR4-y8-IVx" id="eD2-wK-Hfh"/>
+                                                <outlet property="delegate" destination="qR4-y8-IVx" id="OLS-VJ-cxW"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -847,6 +851,10 @@
                             <constraint firstAttribute="trailing" secondItem="PoA-BH-lGp" secondAttribute="trailing" id="vah-xa-eJd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="PoA-BH-lGp" id="NtN-35-qz1"/>
+                        <outlet property="tableView" destination="3tz-FQ-hf2" id="ccv-sU-gHo"/>
+                    </connections>
                 </viewController>
                 <customObject id="UrE-Ph-g28" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

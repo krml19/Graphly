@@ -23,6 +23,11 @@
 		F2D36E561FD30A5B0036784E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E551FD30A5B0036784E /* Unit.swift */; };
 		F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E571FD30CD70036784E /* SplitViewController.swift */; };
 		F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E591FD30D280036784E /* MenuViewController.swift */; };
+		F2D36E611FD30F0A0036784E /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E601FD30F0A0036784E /* MenuViewModel.swift */; };
+		F2D36E661FD310A70036784E /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E651FD310A70036784E /* MenuItemViewModel.swift */; };
+		F2D36E6A1FD3128B0036784E /* MenuTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E691FD3128B0036784E /* MenuTableCellView.swift */; };
+		F2D36E6C1FD3129D0036784E /* MenuTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */; };
+		F2D36E6F1FD31A4D0036784E /* UITableView+Autoregister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E6E1FD31A4D0036784E /* UITableView+Autoregister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		F2D36E551FD30A5B0036784E /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		F2D36E571FD30CD70036784E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		F2D36E591FD30D280036784E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F2D36E601FD30F0A0036784E /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		F2D36E651FD310A70036784E /* MenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
+		F2D36E691FD3128B0036784E /* MenuTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCellView.swift; sourceTree = "<group>"; };
+		F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCellView.xib; sourceTree = "<group>"; };
+		F2D36E6E1FD31A4D0036784E /* UITableView+Autoregister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Autoregister.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +175,7 @@
 		B4126D03B48A9BED397C9498 /* Graphly */ = {
 			isa = PBXGroup;
 			children = (
+				F2D36E6D1FD31A320036784E /* Extensions */,
 				B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */,
 				F2D36E541FD30A450036784E /* Models */,
 				F211F1411FD2F96000382DAE /* Components */,
@@ -187,6 +198,7 @@
 		F211F1411FD2F96000382DAE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F2D36E621FD310780036784E /* Cells */,
 				F2D36E5F1FD30DEF0036784E /* Charts */,
 				F2D36E5E1FD30DD30036784E /* Common */,
 				F2D36E5B1FD30D460036784E /* Menu */,
@@ -206,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D36E591FD30D280036784E /* MenuViewController.swift */,
+				F2D36E601FD30F0A0036784E /* MenuViewModel.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -237,6 +250,24 @@
 				F211F1461FD2FA0900382DAE /* GridChartViewController.swift */,
 			);
 			name = Charts;
+			sourceTree = "<group>";
+		};
+		F2D36E621FD310780036784E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2D36E651FD310A70036784E /* MenuItemViewModel.swift */,
+				F2D36E691FD3128B0036784E /* MenuTableCellView.swift */,
+				F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F2D36E6D1FD31A320036784E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F2D36E6E1FD31A4D0036784E /* UITableView+Autoregister.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +388,7 @@
 			files = (
 				B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */,
 				B412621D0AD1932CC70FD024 /* Main.storyboard in Resources */,
+				F2D36E6C1FD3129D0036784E /* MenuTableCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,12 +569,16 @@
 			files = (
 				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
 				F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */,
+				F2D36E6A1FD3128B0036784E /* MenuTableCellView.swift in Sources */,
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
+				F2D36E611FD30F0A0036784E /* MenuViewModel.swift in Sources */,
 				F2D36E561FD30A5B0036784E /* Unit.swift in Sources */,
 				F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */,
+				F2D36E6F1FD31A4D0036784E /* UITableView+Autoregister.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
 				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
 				B4126517A2CB8CD4BD4BFE18 /* Swinject+Setup.swift in Sources */,
+				F2D36E661FD310A70036784E /* MenuItemViewModel.swift in Sources */,
 				F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
