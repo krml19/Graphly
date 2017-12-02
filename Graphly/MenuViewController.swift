@@ -18,7 +18,7 @@ class MenuViewController: NSViewController {
         }
     }
     @IBOutlet weak var scrollView: NSScrollView!
-    let viewModel = MenuViewModel()
+    let viewModel: MenuViewModel = di.resolve(MenuViewModel.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()

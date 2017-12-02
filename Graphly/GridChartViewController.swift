@@ -9,10 +9,8 @@
 import Cocoa
 
 class GridChartViewController: NSViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
 }

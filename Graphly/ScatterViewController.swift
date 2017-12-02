@@ -7,12 +7,18 @@
 //
 
 import Cocoa
+import Charts
 
 class ScatterViewController: NSViewController {
 
+    @IBOutlet weak var timelineSlider: NSSlider!
+    @IBOutlet weak var scatterView: ScatterChartView! 
+    
+    let viewModel: ScatterViewModel = di.resolve(ScatterViewModel.self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        scatterView.data = viewModel.data
     }
     
 }

@@ -2,10 +2,17 @@ PODS:
   - Charts (3.0.4):
     - Charts/Core (= 3.0.4)
   - Charts/Core (3.0.4)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - SnapKit (4.0.0)
   - Swinject (2.1.1)
 
 DEPENDENCIES:
   - Charts (from `https://github.com/danielgindi/Charts/`, commit `54171609c2f7d987a46eab60eb0422318d08d266`)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SnapKit (~> 4.0.0)
   - Swinject (~> 2.1.1)
 
 EXTERNAL SOURCES:
@@ -20,8 +27,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Charts: c5f4491efc3a24de9213fe3e68484bfdff881cfb
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Swinject: afea49fd95f392b41171669f165842879c48fad6
 
-PODFILE CHECKSUM: 7dd965faa97a885a79b6e1dada809935e07e113e
+PODFILE CHECKSUM: 6de60898d721d5c35de356768366db28d23becdf
 
 COCOAPODS: 1.3.1

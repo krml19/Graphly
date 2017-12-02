@@ -10,10 +10,12 @@ import Cocoa
 
 class SplitViewController: NSSplitViewController {
     
+    @IBOutlet weak var splitViewOutlet: NSSplitView!
+    
+    @IBOutlet weak var chartsItemOutlet: NSSplitViewItem!
+    @IBOutlet weak var menuItemOutlet: NSSplitViewItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
-    
 }

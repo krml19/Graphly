@@ -664,11 +664,12 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Graphly" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="960" height="540"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="960" height="270"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="WTi-YB-nGu"/>
                         </connections>
@@ -697,7 +698,9 @@
                         </connections>
                     </splitView>
                     <connections>
-                        <outlet property="splitView" destination="cLE-oi-FtP" id="q4n-Gb-zka"/>
+                        <outlet property="chartsItemOutlet" destination="Chm-JO-6Kl" id="tL1-IW-kTP"/>
+                        <outlet property="menuItemOutlet" destination="rdI-WH-u0W" id="3iy-p3-wE4"/>
+                        <outlet property="splitViewOutlet" destination="cLE-oi-FtP" id="vCK-uU-5CU"/>
                         <segue destination="qR4-y8-IVx" kind="relationship" relationship="splitItems" id="YUI-ri-K4o"/>
                         <segue destination="keD-Ep-IQl" kind="relationship" relationship="splitItems" id="1Pg-cd-NpW"/>
                     </connections>
@@ -765,17 +768,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McO-OD-R98">
-                                <rect key="frame" x="219" y="152" width="48" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Scatter" id="8PM-Hs-FGH">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="cXD-po-2bb" customClass="ScatterChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="15" width="450" height="285"/>
+                            </customView>
+                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-Au-Nki">
+                                <rect key="frame" x="-2" y="-2" width="454" height="19"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="jhf-Gf-DYh"/>
+                            </slider>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="cXD-po-2bb" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="G2J-b0-Nba"/>
+                            <constraint firstAttribute="bottom" secondItem="1o3-Au-Nki" secondAttribute="bottom" id="TSz-wL-otj"/>
+                            <constraint firstItem="1o3-Au-Nki" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="cmQ-ws-d1Z"/>
+                            <constraint firstAttribute="trailing" secondItem="1o3-Au-Nki" secondAttribute="trailing" id="d8D-M3-cbV"/>
+                            <constraint firstItem="1o3-Au-Nki" firstAttribute="top" secondItem="cXD-po-2bb" secondAttribute="bottom" id="k3b-3E-Dyb"/>
+                            <constraint firstAttribute="trailing" secondItem="cXD-po-2bb" secondAttribute="trailing" id="pH4-FE-rXR"/>
+                            <constraint firstItem="1o3-Au-Nki" firstAttribute="centerX" secondItem="9yb-SL-khs" secondAttribute="centerX" id="tRE-Pr-brp"/>
+                            <constraint firstItem="1o3-Au-Nki" firstAttribute="top" secondItem="cXD-po-2bb" secondAttribute="bottom" id="xYr-ld-EA7"/>
+                            <constraint firstItem="cXD-po-2bb" firstAttribute="top" secondItem="9yb-SL-khs" secondAttribute="top" id="xe7-dV-Itk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scatterView" destination="cXD-po-2bb" id="o9p-Q3-ujA"/>
+                        <outlet property="timelineSlider" destination="1o3-Au-Nki" id="HKU-jD-TL0"/>
+                    </connections>
                 </viewController>
                 <customObject id="obI-za-sW7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

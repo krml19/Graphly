@@ -12,16 +12,16 @@ import Cocoa
 class ViewController: NSViewController {
     
     lazy var gridChartViewController: GridChartViewController = {
-        return storyboard?.instantiate(type: DataProvider.Controllers.grid.type)! as! GridChartViewController
-    }()
+        return storyboard?.instantiate(type: GridChartViewController.self)!
+    }()!
     
     lazy var scatterViewController: ScatterViewController = {
-        return storyboard?.instantiate(type: DataProvider.Controllers.scatter.type)! as! ScatterViewController
-    }()
+        return storyboard?.instantiate(type: ScatterViewController.self)!
+    }()!
     
     lazy var heatMapViewController: HeatMapViewController = {
-        return storyboard?.instantiate(type: DataProvider.Controllers.heatMap.type)! as! HeatMapViewController
-    }()
+        return storyboard?.instantiate(type: HeatMapViewController.self)!
+    }()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +29,13 @@ class ViewController: NSViewController {
     }
     
     func prepareChildViewController(index: Int) {
-        if di.resolve(DataProvider.self).controllers[index] == DataProvider.Controllers.scatter.type {
+        if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.scatter.type {
             displayContentController(content: scatterViewController, containerView: view)
         }
-        if di.resolve(DataProvider.self).controllers[index] == DataProvider.Controllers.grid.type {
+        if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.grid.type {
             displayContentController(content: gridChartViewController, containerView: view)
         }
-        if di.resolve(DataProvider.self).controllers[index] == DataProvider.Controllers.heatMap.type {
+        if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.heatMap.type {
             displayContentController(content: heatMapViewController, containerView: view)
         }
     }

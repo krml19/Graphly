@@ -9,7 +9,6 @@
 import Cocoa
 
 class Unit {
-    
     let code: Int
     let year: Int
     let population: Int
@@ -23,5 +22,4 @@ class Unit {
         self.learnersNum = learnersNum
         self.salary = salary
     }
-    
 }

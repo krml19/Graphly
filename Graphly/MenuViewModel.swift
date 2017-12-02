@@ -9,7 +9,7 @@
 import Cocoa
 
 class MenuViewModel: NSObject {
-    private let models: [MenuItemViewModel] = [MenuItemViewModel(title: "Heat Map"), MenuItemViewModel(title: "Zoom"), MenuItemViewModel(title: "Grid")]
+    private let models: [MenuItemViewModel] = di.resolve(ControllersInfoProvider.self).menuItems
     
     func numberOfRows() -> Int {
         return models.count

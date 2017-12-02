@@ -11,11 +11,9 @@ let di = DependencyInjection()
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        setup()
+ 
     }
 
 
@@ -23,16 +21,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     }
 
-
-
-}
-
-fileprivate extension AppDelegate {
-    func setup() {
-        installDependencies()
-    }
-    
-    private func installDependencies() {
-        di.setup()
-    }
 }

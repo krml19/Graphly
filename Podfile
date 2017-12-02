@@ -8,7 +8,9 @@ target 'Graphly' do
   # Pods for Graphly
   pod 'Charts', :git => 'https://github.com/danielgindi/Charts/', commit: '54171609c2f7d987a46eab60eb0422318d08d266'
   pod 'Swinject', '~> 2.1.1'
-  
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
 
 
   target 'GraphlyTests' do
