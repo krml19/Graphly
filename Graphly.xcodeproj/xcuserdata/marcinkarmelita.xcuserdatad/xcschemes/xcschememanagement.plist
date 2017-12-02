@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>GraphlyUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B4126193A701A548EB0CF674</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>B412657911936B72B564D53F</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
+		<key>B412684D7F7A1756DF9D727A</key>
+		<dict>
+			<key>primary</key>
+			<true />
+		</dict>
 	</dict>
 </dict>
 </plist>

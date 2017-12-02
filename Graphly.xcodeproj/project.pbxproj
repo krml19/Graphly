@@ -16,6 +16,9 @@
 		B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */; };
 		B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41260A1F8A76964A821AA16 /* Assets.xcassets */; };
 		C5E5783DE825AAD4A1FAB0E2 /* Pods_Graphly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C068B67DD5CBBF6A0AD1FE1 /* Pods_Graphly.framework */; };
+		F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */; };
+		F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */; };
+		F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1461FD2FA0900382DAE /* GridChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		B4126D2148166EE6BF67AD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C0C8B1CC5CAF59970FD66D88 /* Pods-GraphlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.release.xcconfig"; sourceTree = "<group>"; };
 		E05DDE7CC2E51C9561AD6852 /* Pods-GraphlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeatMapViewController.swift; sourceTree = "<group>"; };
+		F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterViewController.swift; sourceTree = "<group>"; };
+		F211F1461FD2FA0900382DAE /* GridChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		B4126D03B48A9BED397C9498 /* Graphly */ = {
 			isa = PBXGroup;
 			children = (
+				F211F1411FD2F96000382DAE /* GUI */,
 				B4126D2148166EE6BF67AD8A /* Info.plist */,
 				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
 				B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */,
@@ -160,6 +167,16 @@
 				A97B2072B8127B99FE2CA52E /* Pods_GraphlyUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F211F1411FD2F96000382DAE /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */,
+				F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */,
+				F211F1461FD2FA0900382DAE /* GridChartViewController.swift */,
+			);
+			name = GUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +334,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Graphly/Pods-Graphly-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCSV/SwiftCSV.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCSV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -448,8 +476,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
+				F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */,
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
+				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +699,7 @@
 				B412662B9962F04C23C9AE2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B41268336F88AE7B9B0D378F /* Build configuration list for PBXNativeTarget "Graphly" */ = {
 			isa = XCConfigurationList;
@@ -676,6 +708,7 @@
 				B4126BD042467C9CD560C3BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4126BFAA3004EFAAB4342AB /* Build configuration list for PBXNativeTarget "GraphlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -684,6 +717,7 @@
 				B4126430D61C6D69EC8D0EC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4126EB769C93F5A2ADB2845 /* Build configuration list for PBXProject "Graphly" */ = {
 			isa = XCConfigurationList;

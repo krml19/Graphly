@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '15936797FF5E81F8EBA24D2C73714C95'
+               BlueprintIdentifier = '7F6FE3DA47931F8AA980981836819897'
                BlueprintName = 'Pods-Graphly'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Graphly.framework'>
