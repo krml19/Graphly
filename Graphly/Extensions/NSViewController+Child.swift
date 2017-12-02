@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SnapKit
 
 extension NSViewController {
     func displayContentController(content: NSViewController, containerView: NSView) {
@@ -18,11 +19,8 @@ extension NSViewController {
         
         content.view.frame = containerView.frame
         containerView.addSubview(content.view)
-    }
-}
-
-extension NSStoryboard {
-    func instantiate<T: NSViewController>(type: T.Type) -> T? {
-        return self.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: type.lastClassComponent())) as? T
+        containerView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
 }

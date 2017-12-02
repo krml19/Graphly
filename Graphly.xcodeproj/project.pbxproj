@@ -20,6 +20,15 @@
 		F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */; };
 		F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */; };
 		F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1461FD2FA0900382DAE /* GridChartViewController.swift */; };
+		F2319CA01FD354BF002C422C /* GridChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319C9F1FD354BF002C422C /* GridChartViewModel.swift */; };
+		F2319CA31FD35980002C422C /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CA21FD35980002C422C /* CollectionDataSource.swift */; };
+		F2319CA81FD35BE2002C422C /* GridChartCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CA61FD35BE2002C422C /* GridChartCollectionViewItem.swift */; };
+		F2319CA91FD35BE2002C422C /* GridChartCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2319CA71FD35BE2002C422C /* GridChartCollectionViewItem.xib */; };
+		F2319CAC1FD35C3E002C422C /* GridChartCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CAB1FD35C3E002C422C /* GridChartCollectionViewModel.swift */; };
+		F2319CAE1FD35CB0002C422C /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CAD1FD35CB0002C422C /* CollectionViewItem.swift */; };
+		F2319CB01FD35DED002C422C /* NSCollectionView+Autoregister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CAF1FD35DED002C422C /* NSCollectionView+Autoregister.swift */; };
+		F2319CB21FD362BC002C422C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CB11FD362BC002C422C /* Section.swift */; };
+		F2319CB41FD36A85002C422C /* NSStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CB31FD36A85002C422C /* NSStoryboard+Instantiate.swift */; };
 		F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E21FD31DE3002D237F /* NSViewController+Child.swift */; };
 		F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E51FD32289002D237F /* ControllersInfoProvider.swift */; };
 		F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */; };
@@ -80,6 +89,15 @@
 		F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeatMapViewController.swift; sourceTree = "<group>"; };
 		F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterViewController.swift; sourceTree = "<group>"; };
 		F211F1461FD2FA0900382DAE /* GridChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridChartViewController.swift; sourceTree = "<group>"; };
+		F2319C9F1FD354BF002C422C /* GridChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridChartViewModel.swift; sourceTree = "<group>"; };
+		F2319CA21FD35980002C422C /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		F2319CA61FD35BE2002C422C /* GridChartCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridChartCollectionViewItem.swift; sourceTree = "<group>"; };
+		F2319CA71FD35BE2002C422C /* GridChartCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridChartCollectionViewItem.xib; sourceTree = "<group>"; };
+		F2319CAB1FD35C3E002C422C /* GridChartCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridChartCollectionViewModel.swift; sourceTree = "<group>"; };
+		F2319CAD1FD35CB0002C422C /* CollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		F2319CAF1FD35DED002C422C /* NSCollectionView+Autoregister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionView+Autoregister.swift"; sourceTree = "<group>"; };
+		F2319CB11FD362BC002C422C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		F2319CB31FD36A85002C422C /* NSStoryboard+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
 		F24178E21FD31DE3002D237F /* NSViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Child.swift"; sourceTree = "<group>"; };
 		F24178E51FD32289002D237F /* ControllersInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersInfoProvider.swift; sourceTree = "<group>"; };
 		F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LastClassComponent.swift"; sourceTree = "<group>"; };
@@ -233,6 +251,38 @@
 		F2319C9D1FD351A9002C422C /* Grid */ = {
 			isa = PBXGroup;
 			children = (
+				F211F1461FD2FA0900382DAE /* GridChartViewController.swift */,
+				F2319C9F1FD354BF002C422C /* GridChartViewModel.swift */,
+			);
+			name = Grid;
+			sourceTree = "<group>";
+		};
+		F2319CA11FD3596B002C422C /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F2319CA21FD35980002C422C /* CollectionDataSource.swift */,
+				F2319CAD1FD35CB0002C422C /* CollectionViewItem.swift */,
+				F2319CB11FD362BC002C422C /* Section.swift */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		F2319CA41FD35B9C002C422C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F2D36E651FD310A70036784E /* MenuItemViewModel.swift */,
+				F2D36E691FD3128B0036784E /* MenuTableCellView.swift */,
+				F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		F2319CA51FD35BC7002C422C /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				F2319CA61FD35BE2002C422C /* GridChartCollectionViewItem.swift */,
+				F2319CA71FD35BE2002C422C /* GridChartCollectionViewItem.xib */,
+				F2319CAB1FD35C3E002C422C /* GridChartCollectionViewModel.swift */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -301,6 +351,7 @@
 		F2D36E5E1FD30DD30036784E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F2319CA11FD3596B002C422C /* Collection */,
 				B412643F7A2A7AAEC6A63082 /* ViewController.swift */,
 				F2B5EE0C1FD3462E009F123E /* ViewModel.swift */,
 			);
@@ -314,7 +365,6 @@
 				F2319C9C1FD351A1002C422C /* Heat map */,
 				F2B5EE0F1FD34653009F123E /* Scatter */,
 				F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */,
-				F211F1461FD2FA0900382DAE /* GridChartViewController.swift */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -322,9 +372,8 @@
 		F2D36E621FD310780036784E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F2D36E651FD310A70036784E /* MenuItemViewModel.swift */,
-				F2D36E691FD3128B0036784E /* MenuTableCellView.swift */,
-				F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */,
+				F2319CA51FD35BC7002C422C /* Grid */,
+				F2319CA41FD35B9C002C422C /* Menu */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -335,6 +384,8 @@
 				F2D36E6E1FD31A4D0036784E /* NSTableView+Autoregister.swift */,
 				F24178E21FD31DE3002D237F /* NSViewController+Child.swift */,
 				F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */,
+				F2319CAF1FD35DED002C422C /* NSCollectionView+Autoregister.swift */,
+				F2319CB31FD36A85002C422C /* NSStoryboard+Instantiate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -457,6 +508,7 @@
 			files = (
 				B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */,
 				B412621D0AD1932CC70FD024 /* Main.storyboard in Resources */,
+				F2319CA91FD35BE2002C422C /* GridChartCollectionViewItem.xib in Resources */,
 				F2D36E6C1FD3129D0036784E /* MenuTableCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */,
+				F2319CAC1FD35C3E002C422C /* GridChartCollectionViewModel.swift in Sources */,
 				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
 				F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */,
 				F24178EA1FD32A5D002D237F /* NotificationHelper.swift in Sources */,
@@ -650,18 +703,25 @@
 				F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */,
 				F2B5EE091FD342BB009F123E /* DataProvider.swift in Sources */,
 				F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */,
+				F2319CB21FD362BC002C422C /* Section.swift in Sources */,
 				F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */,
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
+				F2319CA81FD35BE2002C422C /* GridChartCollectionViewItem.swift in Sources */,
 				F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */,
 				F2D36E611FD30F0A0036784E /* MenuViewModel.swift in Sources */,
 				F2D36E561FD30A5B0036784E /* Unit.swift in Sources */,
+				F2319CB01FD35DED002C422C /* NSCollectionView+Autoregister.swift in Sources */,
 				F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */,
+				F2319CA31FD35980002C422C /* CollectionDataSource.swift in Sources */,
 				F2D36E6F1FD31A4D0036784E /* NSTableView+Autoregister.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
 				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
+				F2319CB41FD36A85002C422C /* NSStoryboard+Instantiate.swift in Sources */,
 				B4126517A2CB8CD4BD4BFE18 /* DependencyInjection.swift in Sources */,
 				F2D36E661FD310A70036784E /* MenuItemViewModel.swift in Sources */,
 				F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */,
+				F2319CAE1FD35CB0002C422C /* CollectionViewItem.swift in Sources */,
+				F2319CA01FD354BF002C422C /* GridChartViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

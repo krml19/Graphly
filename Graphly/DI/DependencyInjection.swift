@@ -45,5 +45,8 @@ fileprivate extension DependencyInjection {
         
         container.register(ScatterViewModel.self) { _ -> ScatterViewModel in ScatterViewModel() }
             .inObjectScope(ObjectScope.container)
+        
+        container.register(GridChartViewModel.self) { _ -> GridChartViewModel in GridChartViewModel() }
+            .inObjectScope(ObjectScope.container)
     }
 }
