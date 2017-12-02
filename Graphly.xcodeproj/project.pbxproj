@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AEC85F17AF4D435CC77C30E /* Pods_GraphlyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A502FE989DFB63ACD76A6273 /* Pods_GraphlyTests.framework */; };
+		74616B6EB273ED72D8FDCEC5 /* Pods_GraphlyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97B2072B8127B99FE2CA52E /* Pods_GraphlyUITests.framework */; };
+		B412621D0AD1932CC70FD024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41269D98DCDA5DFE9C29D17 /* Main.storyboard */; };
+		B412664203E0FEDC0CF9468C /* GraphlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412699F16F40C41B6866382 /* GraphlyTests.swift */; };
+		B41266BBA4DAB1074222A7D9 /* GraphlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41263A5EB58CF276ECAC9CB /* GraphlyUITests.swift */; };
+		B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412643F7A2A7AAEC6A63082 /* ViewController.swift */; };
+		B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */; };
+		B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41260A1F8A76964A821AA16 /* Assets.xcassets */; };
+		C5E5783DE825AAD4A1FAB0E2 /* Pods_Graphly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C068B67DD5CBBF6A0AD1FE1 /* Pods_Graphly.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B412699D72C91ACB1CEBF446 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B41261DC993F7D120D931B13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B412684D7F7A1756DF9D727A;
+			remoteInfo = Graphly;
+		};
+		B4126AE7F2ACBFB4899051FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B41261DC993F7D120D931B13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B412684D7F7A1756DF9D727A;
+			remoteInfo = Graphly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		143892EBD68CD07D19596A75 /* Pods-Graphly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graphly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Graphly/Pods-Graphly.release.xcconfig"; sourceTree = "<group>"; };
+		4C068B67DD5CBBF6A0AD1FE1 /* Pods_Graphly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Graphly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AAB11123676CEA44C1E394 /* Pods-Graphly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graphly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Graphly/Pods-Graphly.debug.xcconfig"; sourceTree = "<group>"; };
+		6716295C24716858C39CC260 /* Pods-GraphlyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyUITests/Pods-GraphlyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81804218567C3C966952EEC7 /* Pods-GraphlyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyUITests/Pods-GraphlyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A502FE989DFB63ACD76A6273 /* Pods_GraphlyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphlyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97B2072B8127B99FE2CA52E /* Pods_GraphlyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphlyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41260A1F8A76964A821AA16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B412636D80E4090724954671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B41263A5EB58CF276ECAC9CB /* GraphlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphlyUITests.swift; sourceTree = "<group>"; };
+		B412643F7A2A7AAEC6A63082 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B41264D9097723BD169655C7 /* GraphlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41265F8E99244737827324F /* Graphly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graphly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41266E199A691B0F4187323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B41268A28879DD5F6C76CA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4126943B4B20A03763547DF /* GraphlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B412699F16F40C41B6866382 /* GraphlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphlyTests.swift; sourceTree = "<group>"; };
+		B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4126D2148166EE6BF67AD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		C0C8B1CC5CAF59970FD66D88 /* Pods-GraphlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		E05DDE7CC2E51C9561AD6852 /* Pods-GraphlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B41261C695DEEAD164F55D44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5E5783DE825AAD4A1FAB0E2 /* Pods_Graphly.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4126353DA39C9065032FC01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AEC85F17AF4D435CC77C30E /* Pods_GraphlyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4126B61BAD72CEB2CFE8A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74616B6EB273ED72D8FDCEC5 /* Pods_GraphlyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A02695F529FBA59FC14A0D46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63AAB11123676CEA44C1E394 /* Pods-Graphly.debug.xcconfig */,
+				143892EBD68CD07D19596A75 /* Pods-Graphly.release.xcconfig */,
+				E05DDE7CC2E51C9561AD6852 /* Pods-GraphlyTests.debug.xcconfig */,
+				C0C8B1CC5CAF59970FD66D88 /* Pods-GraphlyTests.release.xcconfig */,
+				6716295C24716858C39CC260 /* Pods-GraphlyUITests.debug.xcconfig */,
+				81804218567C3C966952EEC7 /* Pods-GraphlyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B41261D8A6207990B8F51710 /* GraphlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B41266E199A691B0F4187323 /* Info.plist */,
+				B41263A5EB58CF276ECAC9CB /* GraphlyUITests.swift */,
+			);
+			path = GraphlyUITests;
+			sourceTree = "<group>";
+		};
+		B412653491742191E08DCAA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B41265F8E99244737827324F /* Graphly.app */,
+				B4126943B4B20A03763547DF /* GraphlyTests.xctest */,
+				B41264D9097723BD169655C7 /* GraphlyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4126651E9E3282A38FB63DE = {
+			isa = PBXGroup;
+			children = (
+				B412653491742191E08DCAA1 /* Products */,
+				B4126D03B48A9BED397C9498 /* Graphly */,
+				B4126892805847BE9D47481C /* GraphlyTests */,
+				B41261D8A6207990B8F51710 /* GraphlyUITests */,
+				A02695F529FBA59FC14A0D46 /* Pods */,
+				D67C243964F4B98EAF0D7323 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4126892805847BE9D47481C /* GraphlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B412636D80E4090724954671 /* Info.plist */,
+				B412699F16F40C41B6866382 /* GraphlyTests.swift */,
+			);
+			path = GraphlyTests;
+			sourceTree = "<group>";
+		};
+		B4126D03B48A9BED397C9498 /* Graphly */ = {
+			isa = PBXGroup;
+			children = (
+				B4126D2148166EE6BF67AD8A /* Info.plist */,
+				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
+				B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */,
+				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
+				B412643F7A2A7AAEC6A63082 /* ViewController.swift */,
+			);
+			path = Graphly;
+			sourceTree = "<group>";
+		};
+		D67C243964F4B98EAF0D7323 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C068B67DD5CBBF6A0AD1FE1 /* Pods_Graphly.framework */,
+				A502FE989DFB63ACD76A6273 /* Pods_GraphlyTests.framework */,
+				A97B2072B8127B99FE2CA52E /* Pods_GraphlyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4126193A701A548EB0CF674 /* GraphlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B41265553EA5380BB50402D0 /* Build configuration list for PBXNativeTarget "GraphlyTests" */;
+			buildPhases = (
+				7E5BE942BD98E3A8585D4928 /* [CP] Check Pods Manifest.lock */,
+				B412617413D4EE598A7DF6BF /* Sources */,
+				B4126353DA39C9065032FC01 /* Frameworks */,
+				B41262C4CC74548F2D5CB6CC /* Resources */,
+				5C7F9BDEE05A84361516EAC3 /* [CP] Embed Pods Frameworks */,
+				C4395FE15192112A8140F3C9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4126947F2AFB2378D5C7576 /* PBXTargetDependency */,
+			);
+			name = GraphlyTests;
+			productName = GraphlyTests;
+			productReference = B4126943B4B20A03763547DF /* GraphlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B412657911936B72B564D53F /* GraphlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4126BFAA3004EFAAB4342AB /* Build configuration list for PBXNativeTarget "GraphlyUITests" */;
+			buildPhases = (
+				7ACB1560166CCA6D511451CB /* [CP] Check Pods Manifest.lock */,
+				B412616345A6519142E2817E /* Sources */,
+				B4126B61BAD72CEB2CFE8A6C /* Frameworks */,
+				B412603221530BA68A580FC2 /* Resources */,
+				C1F475174B7A52325DB82C0A /* [CP] Embed Pods Frameworks */,
+				15A51AF079921E7E2E76AA76 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B41262CB83B9FE1D59BAE2FE /* PBXTargetDependency */,
+			);
+			name = GraphlyUITests;
+			productName = GraphlyUITests;
+			productReference = B41264D9097723BD169655C7 /* GraphlyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B412684D7F7A1756DF9D727A /* Graphly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B41268336F88AE7B9B0D378F /* Build configuration list for PBXNativeTarget "Graphly" */;
+			buildPhases = (
+				E35B8D20C199C4A073C59AC0 /* [CP] Check Pods Manifest.lock */,
+				B4126516894A726600BC35D8 /* Sources */,
+				B41261C695DEEAD164F55D44 /* Frameworks */,
+				B4126A8D212F0ED5FD4D3A69 /* Resources */,
+				5E91A7524944DBEEF0CD789B /* [CP] Embed Pods Frameworks */,
+				DA8AB20C4B29D7113D08F82E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Graphly;
+			productName = Graphly;
+			productReference = B41265F8E99244737827324F /* Graphly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B41261DC993F7D120D931B13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Marcin Karmelita";
+			};
+			buildConfigurationList = B4126EB769C93F5A2ADB2845 /* Build configuration list for PBXProject "Graphly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B4126651E9E3282A38FB63DE;
+			productRefGroup = B412653491742191E08DCAA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B412684D7F7A1756DF9D727A /* Graphly */,
+				B4126193A701A548EB0CF674 /* GraphlyTests */,
+				B412657911936B72B564D53F /* GraphlyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B412603221530BA68A580FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41262C4CC74548F2D5CB6CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4126A8D212F0ED5FD4D3A69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */,
+				B412621D0AD1932CC70FD024 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15A51AF079921E7E2E76AA76 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraphlyUITests/Pods-GraphlyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C7F9BDEE05A84361516EAC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E91A7524944DBEEF0CD789B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graphly/Pods-Graphly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ACB1560166CCA6D511451CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GraphlyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E5BE942BD98E3A8585D4928 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GraphlyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1F475174B7A52325DB82C0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraphlyUITests/Pods-GraphlyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4395FE15192112A8140F3C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8AB20C4B29D7113D08F82E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Graphly/Pods-Graphly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E35B8D20C199C4A073C59AC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Graphly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B412616345A6519142E2817E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B41266BBA4DAB1074222A7D9 /* GraphlyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B412617413D4EE598A7DF6BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B412664203E0FEDC0CF9468C /* GraphlyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4126516894A726600BC35D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
+				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B41262CB83B9FE1D59BAE2FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B412684D7F7A1756DF9D727A /* Graphly */;
+			targetProxy = B412699D72C91ACB1CEBF446 /* PBXContainerItemProxy */;
+		};
+		B4126947F2AFB2378D5C7576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B412684D7F7A1756DF9D727A /* Graphly */;
+			targetProxy = B4126AE7F2ACBFB4899051FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B41269D98DCDA5DFE9C29D17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B41268A28879DD5F6C76CA0A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B41260F670C3B64406051E9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		B4126430D61C6D69EC8D0EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81804218567C3C966952EEC7 /* Pods-GraphlyUITests.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GraphlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.GraphlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.1;
+				TEST_TARGET_NAME = Graphly;
+			};
+			name = Release;
+		};
+		B41265B1C4322A51596D65BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6716295C24716858C39CC260 /* Pods-GraphlyUITests.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GraphlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.GraphlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.1;
+				TEST_TARGET_NAME = Graphly;
+			};
+			name = Debug;
+		};
+		B412662B9962F04C23C9AE2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0C8B1CC5CAF59970FD66D88 /* Pods-GraphlyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Graphly.app/Contents/MacOS/Graphly";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GraphlyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.GraphlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.1;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		B4126839B50EE6EC48CFAACB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E05DDE7CC2E51C9561AD6852 /* Pods-GraphlyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Graphly.app/Contents/MacOS/Graphly";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GraphlyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.GraphlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.1;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		B4126BC4357F49072D442576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4126BD042467C9CD560C3BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143892EBD68CD07D19596A75 /* Pods-Graphly.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Graphly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.Graphly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.1;
+			};
+			name = Release;
+		};
+		B4126F8DEC3E70E52E50CDEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63AAB11123676CEA44C1E394 /* Pods-Graphly.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Graphly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = marcin.karmelita.Graphly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B41265553EA5380BB50402D0 /* Build configuration list for PBXNativeTarget "GraphlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4126839B50EE6EC48CFAACB /* Debug */,
+				B412662B9962F04C23C9AE2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B41268336F88AE7B9B0D378F /* Build configuration list for PBXNativeTarget "Graphly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4126F8DEC3E70E52E50CDEA /* Debug */,
+				B4126BD042467C9CD560C3BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B4126BFAA3004EFAAB4342AB /* Build configuration list for PBXNativeTarget "GraphlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B41265B1C4322A51596D65BC /* Debug */,
+				B4126430D61C6D69EC8D0EC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B4126EB769C93F5A2ADB2845 /* Build configuration list for PBXProject "Graphly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4126BC4357F49072D442576 /* Debug */,
+				B41260F670C3B64406051E9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B41261DC993F7D120D931B13 /* Project object */;
+}
