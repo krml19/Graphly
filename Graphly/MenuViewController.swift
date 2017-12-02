@@ -9,6 +9,8 @@
 import Cocoa
 
 class MenuViewController: NSViewController {
+    typealias SelectionClosure = ((Int) -> ())
+    var onSelectChanged: SelectionClosure?
 
     @IBOutlet weak var tableView: NSTableView! {
         didSet {
@@ -36,6 +38,14 @@ extension MenuViewController: NSTableViewDelegate {
         let cell: MenuTableCellView = tableView.make(MenuTableCellView.self, owner: self) as! MenuTableCellView
         cell.configure(viewModel: cellViewModel)
         return cell
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if (onSelectChanged != nil) {
+            onSelectChanged!(tableView.selectedRow)
+            
+        }
+        NotificationCenter.default.post(name: .onSegmentChanged, object: nil, userInfo: ["index" : tableView.selectedRow])
     }
 }
 

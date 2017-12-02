@@ -20,6 +20,10 @@
 		F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */; };
 		F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */; };
 		F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1461FD2FA0900382DAE /* GridChartViewController.swift */; };
+		F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E21FD31DE3002D237F /* NSViewController+Child.swift */; };
+		F24178E61FD32289002D237F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E51FD32289002D237F /* DataProvider.swift */; };
+		F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */; };
+		F24178EA1FD32A5D002D237F /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E91FD32A5D002D237F /* NotificationHelper.swift */; };
 		F2D36E561FD30A5B0036784E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E551FD30A5B0036784E /* Unit.swift */; };
 		F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E571FD30CD70036784E /* SplitViewController.swift */; };
 		F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E591FD30D280036784E /* MenuViewController.swift */; };
@@ -27,7 +31,7 @@
 		F2D36E661FD310A70036784E /* MenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E651FD310A70036784E /* MenuItemViewModel.swift */; };
 		F2D36E6A1FD3128B0036784E /* MenuTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E691FD3128B0036784E /* MenuTableCellView.swift */; };
 		F2D36E6C1FD3129D0036784E /* MenuTableCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */; };
-		F2D36E6F1FD31A4D0036784E /* UITableView+Autoregister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E6E1FD31A4D0036784E /* UITableView+Autoregister.swift */; };
+		F2D36E6F1FD31A4D0036784E /* NSTableView+Autoregister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E6E1FD31A4D0036784E /* NSTableView+Autoregister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeatMapViewController.swift; sourceTree = "<group>"; };
 		F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterViewController.swift; sourceTree = "<group>"; };
 		F211F1461FD2FA0900382DAE /* GridChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridChartViewController.swift; sourceTree = "<group>"; };
+		F24178E21FD31DE3002D237F /* NSViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Child.swift"; sourceTree = "<group>"; };
+		F24178E51FD32289002D237F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LastClassComponent.swift"; sourceTree = "<group>"; };
+		F24178E91FD32A5D002D237F /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		F2D36E551FD30A5B0036784E /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		F2D36E571FD30CD70036784E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		F2D36E591FD30D280036784E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +88,7 @@
 		F2D36E651FD310A70036784E /* MenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemViewModel.swift; sourceTree = "<group>"; };
 		F2D36E691FD3128B0036784E /* MenuTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableCellView.swift; sourceTree = "<group>"; };
 		F2D36E6B1FD3129D0036784E /* MenuTableCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableCellView.xib; sourceTree = "<group>"; };
-		F2D36E6E1FD31A4D0036784E /* UITableView+Autoregister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Autoregister.swift"; sourceTree = "<group>"; };
+		F2D36E6E1FD31A4D0036784E /* NSTableView+Autoregister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTableView+Autoregister.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +183,7 @@
 		B4126D03B48A9BED397C9498 /* Graphly */ = {
 			isa = PBXGroup;
 			children = (
+				F24178E41FD3227A002D237F /* Helpers */,
 				F2D36E6D1FD31A320036784E /* Extensions */,
 				B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */,
 				F2D36E541FD30A450036784E /* Models */,
@@ -204,6 +213,15 @@
 				F2D36E5B1FD30D460036784E /* Menu */,
 			);
 			name = Components;
+			sourceTree = "<group>";
+		};
+		F24178E41FD3227A002D237F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F24178E51FD32289002D237F /* DataProvider.swift */,
+				F24178E91FD32A5D002D237F /* NotificationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F2D36E541FD30A450036784E /* Models */ = {
@@ -265,7 +283,9 @@
 		F2D36E6D1FD31A320036784E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F2D36E6E1FD31A4D0036784E /* UITableView+Autoregister.swift */,
+				F2D36E6E1FD31A4D0036784E /* NSTableView+Autoregister.swift */,
+				F24178E21FD31DE3002D237F /* NSViewController+Child.swift */,
+				F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -567,14 +587,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */,
 				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
 				F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */,
+				F24178EA1FD32A5D002D237F /* NotificationHelper.swift in Sources */,
 				F2D36E6A1FD3128B0036784E /* MenuTableCellView.swift in Sources */,
+				F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */,
+				F24178E61FD32289002D237F /* DataProvider.swift in Sources */,
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
 				F2D36E611FD30F0A0036784E /* MenuViewModel.swift in Sources */,
 				F2D36E561FD30A5B0036784E /* Unit.swift in Sources */,
 				F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */,
-				F2D36E6F1FD31A4D0036784E /* UITableView+Autoregister.swift in Sources */,
+				F2D36E6F1FD31A4D0036784E /* NSTableView+Autoregister.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
 				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
 				B4126517A2CB8CD4BD4BFE18 /* Swinject+Setup.swift in Sources */,

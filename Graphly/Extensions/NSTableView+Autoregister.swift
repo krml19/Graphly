@@ -9,7 +9,7 @@
 import Cocoa
 extension NSTableView {
     func register<T: NSTableCellView>(_: T.Type) {
-        let nib = NSNib(nibNamed: NSNib.Name(rawValue: T.className().components(separatedBy: ".").last!), bundle: nil)
+        let nib = NSNib(nibNamed: NSNib.Name(rawValue: T.lastClassComponent()), bundle: nil)
         let identifier = NSUserInterfaceItemIdentifier(rawValue: T.className())
         self.register(nib, forIdentifier: identifier)
     }

@@ -4,25 +4,25 @@
 //
 
 import Foundation
-//import Swinject
-//import SwinjectStoryboard
-//
-//extension SwinjectStoryboard {
-//    @objc class func setup() {
-//        setupViewControllers()
-//    }
-//
-//    @objc fileprivate class func setupViewControllers() {
-//        defaultContainer.storyboardInitCompleted(GridChartViewController.self) { r, c in
-//
-//        }
-//
-//        defaultContainer.storyboardInitCompleted(GridChartViewController.self) { r, c in
-//
-//        }
-//
-//        defaultContainer.storyboardInitCompleted(GridChartViewController.self) { r, c in
-//
-//        }
-//    }
-//}
+import Swinject
+
+class DependencyInjection {
+    func resolve<T>(_: T.Type) -> T {
+        return container.resolve(T.self)!
+    }
+    
+    private let container: Container
+    
+    init(container: Container = Container()) {
+        self.container = container
+    }
+    
+    var dataProvider: DataProvider {
+        return container.resolve(DataProvider.self)!
+    }
+    
+    func setup() {
+        container.register(DataProvider.self) { _ -> DataProvider in DataProvider() }
+            .inObjectScope(ObjectScope.container)
+    }
+}

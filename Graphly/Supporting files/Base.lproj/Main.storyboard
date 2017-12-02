@@ -686,7 +686,7 @@
             <objects>
                 <splitViewController id="rjN-Gh-xAu" customClass="SplitViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem id="rdI-WH-u0W"/>
+                        <splitViewItem canCollapse="YES" id="rdI-WH-u0W"/>
                         <splitViewItem id="Chm-JO-6Kl"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="cLE-oi-FtP">
@@ -698,8 +698,8 @@
                     </splitView>
                     <connections>
                         <outlet property="splitView" destination="cLE-oi-FtP" id="q4n-Gb-zka"/>
-                        <segue destination="keD-Ep-IQl" kind="relationship" relationship="splitItems" id="1Pg-cd-NpW"/>
                         <segue destination="qR4-y8-IVx" kind="relationship" relationship="splitItems" id="YUI-ri-K4o"/>
+                        <segue destination="keD-Ep-IQl" kind="relationship" relationship="splitItems" id="1Pg-cd-NpW"/>
                     </connections>
                 </splitViewController>
                 <customObject id="6lI-4K-V6U" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -736,10 +736,21 @@
         <!--Heat Map View Controller-->
         <scene sceneID="EFa-Wo-4nR">
             <objects>
-                <viewController id="rjD-3U-V74" customClass="HeatMapViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeatMapViewController" id="rjD-3U-V74" customClass="HeatMapViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="QrY-RJ-oVd">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g85-lR-T9C">
+                                <rect key="frame" x="200" y="109" width="33" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Heat" id="iGi-Sn-bP4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="d5x-82-DBu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -749,10 +760,21 @@
         <!--Scatter View Controller-->
         <scene sceneID="Cf7-8D-oib">
             <objects>
-                <viewController id="8Rq-PR-DPd" customClass="ScatterViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScatterViewController" id="8Rq-PR-DPd" customClass="ScatterViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="9yb-SL-khs">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="McO-OD-R98">
+                                <rect key="frame" x="219" y="152" width="48" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Scatter" id="8PM-Hs-FGH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="obI-za-sW7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -762,10 +784,21 @@
         <!--Grid Chart View Controller-->
         <scene sceneID="eww-pV-IJe">
             <objects>
-                <viewController id="DBm-06-ymk" customClass="GridChartViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GridChartViewController" id="DBm-06-ymk" customClass="GridChartViewController" customModule="Graphly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="VpA-ai-A1z">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSq-Az-kFb">
+                                <rect key="frame" x="272" y="82" width="30" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Grid" id="LD2-7s-6lJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="7m3-vI-ZMD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
