@@ -11,18 +11,15 @@ import Foundation
 struct Units {
     var list: [Unit] = []
     
-    var minYear: UInt {
-        let min = list.map({$0.year}).min() ?? 0
-        return UInt(min)
+    var minYear: Int {
+        return list.map({$0.year}).min() ?? 0
     }
     
-    var maxYear: UInt {
-        let max = list.map({$0.year}).max() ?? 0
-        return UInt(max)
+    var maxYear: Int {
+        return list.map({$0.year}).max() ?? 0
     }
     
     var sizeYear: Int {
-        let size = Set(list.map({$0.year}))
-        return size.count
+        return Set(list.map({$0.year})).count
     }
 }

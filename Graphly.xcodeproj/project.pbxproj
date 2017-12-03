@@ -324,9 +324,6 @@
 		F23D0CAA1FD4172900F0E416 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F23D0CAB1FD4173400F0E416 /* data.json */,
-				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
-				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -404,6 +401,9 @@
 		F2D36E5D1FD30D5B0036784E /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				F23D0CAB1FD4173400F0E416 /* data.json */,
+				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
+				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
 				F2595EE91FD4343000946414 /* scripts */,
 				B4126D2148166EE6BF67AD8A /* Info.plist */,
 			);

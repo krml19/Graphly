@@ -21,29 +21,28 @@ class ScatterViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scatterView.data = ScatterChartData()
-        prepareData(timelineValue: timelineSlider.tickMarkPosition.rawValue, populationValue: populationSlider.tickMarkPosition.rawValue)
+        scatterView.data = ScatterChartData(dataSets: [])
+        prepareData()
     }
     
     @IBAction func populationValueChanged(_ sender: NSSlider) {
-        log.info(sender.tickMarkPosition.rawValue)
-        prepareData(timelineValue: timelineSlider.tickMarkPosition.rawValue, populationValue: populationSlider.tickMarkPosition.rawValue)
+        prepareData()
     }
     
     @IBAction func timelineValueChanged(_ sender: NSSlider) {
-        log.info(sender.tickMarkPosition.rawValue)
-        
-        prepareData(timelineValue: timelineSlider.tickMarkPosition.rawValue, populationValue: populationSlider.tickMarkPosition.rawValue)
+        prepareData()
     }
 }
 
 extension ScatterViewController {
-    func prepareData(timelineValue: UInt, populationValue: UInt) {
-        viewModel.prepareData(timelineValue: timelineValue, populationValue: populationValue) { [weak self] (scatterData) in
+    func prepareData() {
+        let timelineTick = Int(timelineSlider.closestTickMarkValue(toValue: timelineSlider.doubleValue))
+        let populationTick = Int(populationSlider.closestTickMarkValue(toValue: populationSlider.doubleValue))
+        
+        viewModel.prepareData(timelineValue: timelineTick, populationValue: populationTick) { [weak self] (scatterData) in
             DispatchQueue.main.async {
                 guard let strongSelf = self else { return }
-//                strongSelf.populationSlider.numberOfTickMarks = strongSelf.viewModel.populationValues.size
-//                strongSelf.timelineSlider.numberOfTickMarks = strongSelf.viewModel.populationValues.size
+
                 strongSelf.scatterView.data = scatterData
                 strongSelf.scatterView.notifyDataSetChanged()
             }

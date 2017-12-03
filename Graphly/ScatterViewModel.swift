@@ -11,13 +11,13 @@ import Charts
 
 class ScatterViewModel: NSObject {
     typealias Completion = ((ScatterChartData) -> ())
-    typealias SliderValues = (min: UInt, max: UInt, size: Int)
+    typealias SliderValues = (min: Int, max: Int, size: Int)
     let localDataProvider: LocalDataProvider = di.resolve(LocalDataProvider.self)
     var models: Units = Units()
     var timelineValues: SliderValues = (min: 0, max: 0, size: 0)
     var populationValues: SliderValues = (min: 0, max: 0, size: 0)
     
-    func prepareData(timelineValue: UInt, populationValue: UInt, completion: @escaping Completion) {
+    func prepareData(timelineValue: Int, populationValue: Int, completion: @escaping Completion) {
         let year = models.minYear + timelineValue
 //        let populationMin = 0
 //        let populationMax = 0
