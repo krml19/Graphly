@@ -15,13 +15,13 @@ class ScatterViewModel: NSObject {
     
     func prepareData(timelineValue: Int, populationValue: Int) -> ScatterChartData {
         let year = localDataProvider.models.minYear + timelineValue
+        let population = localDataProvider.models.populations[populationValue]
         
-        log.debug("Timeline value: \(timelineValue), populationValue: \(populationValue)")
             
-        return ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (model) -> (Bool) in
-            //                    return true
-            //                    return model.year == year && model.population > populationMin && model.population < populationMax
-            return model.year == year
+        let data = ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (model) -> (Bool) in
+            return model.year == year && model.population > population.min && model.population < population.max
         })
+        log.debug("Year: \(year), population: \(population), elements: \(data.entryCount)")
+        return data
     }
 }

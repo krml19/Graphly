@@ -21,6 +21,8 @@ class ScatterViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timelineSlider.numberOfTickMarks = viewModel.localDataProvider.models.sizeYear
+        populationSlider.numberOfTickMarks = viewModel.localDataProvider.models.populations.count
         prepareData()
     }
     
