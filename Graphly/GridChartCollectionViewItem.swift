@@ -10,7 +10,8 @@ import Cocoa
 import Charts
 
 class GridChartCollectionViewItem: NSCollectionViewItem {
-
+    
+    @IBOutlet weak var titleOutlet: NSTextField!
     @IBOutlet weak var scatterChartView: ScatterChartView! {
         didSet {
             scatterChartView.legend.enabled = false
@@ -24,5 +25,6 @@ class GridChartCollectionViewItem: NSCollectionViewItem {
     
     func configure(viewModel: GridChartCollectionViewModel) {
         scatterChartView.data = viewModel.scatterData
+        titleOutlet.stringValue = "\(viewModel.year)"
     }
 }

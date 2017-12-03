@@ -10,18 +10,28 @@ import Foundation
 import Charts
 
 class GridChartViewModel: ViewModel {
-    
+
     var dataSource: CollectionDataSource<GridChartCollectionViewModel, GridChartHeaderViewModel> = {
-        var items: [GridChartCollectionViewModel] = []
-        for i in 0...20 {
-            items.append(GridChartCollectionViewModel(scatterData: di.resolve(DataProviderProtocol.self).scatterData))
+        let localDataProvider: LocalDataProvider = di.resolve(LocalDataProvider.self)
+        let years = localDataProvider.models.years
+        let populations = localDataProvider.models.populations
+        
+        var sections: [Section<GridChartCollectionViewModel, GridChartHeaderViewModel>] = []
+        populations.forEach { (min, max) in
+            var gridChartCollectionViewModels: [GridChartCollectionViewModel] = []
+            years.forEach({ (year) in
+                let scatterData = ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (unit) -> (Bool) in
+                    return unit.year == year && unit.population >= min && unit.population < max
+                })
+                gridChartCollectionViewModels.append(GridChartCollectionViewModel(scatterData: scatterData, year: year))
+            })
+            let section: Section<GridChartCollectionViewModel, GridChartHeaderViewModel> = Section(headerViewModel: GridChartHeaderViewModel(title: "Ludność: \(min) - \(max)"), items: gridChartCollectionViewModels)
+            sections.append(section)
         }
-       
-        let section0 = Section<GridChartCollectionViewModel, GridChartHeaderViewModel>(headerViewModel: GridChartHeaderViewModel(title: "0"), items: items)
-        let section1 = Section<GridChartCollectionViewModel, GridChartHeaderViewModel>(headerViewModel: GridChartHeaderViewModel(title: "1"), items: items)
-        let section2 = Section<GridChartCollectionViewModel, GridChartHeaderViewModel>(headerViewModel: GridChartHeaderViewModel(title: "2"), items: items)
-        let sections = [section0, section1, section2]
+        
         let dataSource = CollectionDataSource<GridChartCollectionViewModel, GridChartHeaderViewModel>(sections: sections)
         return dataSource
     }()
 }
+
+

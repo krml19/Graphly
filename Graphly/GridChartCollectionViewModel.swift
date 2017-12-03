@@ -11,8 +11,9 @@ import Charts
 
 class GridChartCollectionViewModel {
     let scatterData: ScatterChartData
-    
-    init(scatterData: ScatterChartData) {
+    let year: Int
+    init(scatterData: ScatterChartData, year: Int) {
         self.scatterData = scatterData
+        self.year = year
     }
 }

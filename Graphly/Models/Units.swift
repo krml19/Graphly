@@ -24,4 +24,11 @@ struct Units {
     var sizeYear: Int {
         return Set(list.map({$0.year})).count
     }
+    
+    var years: [Int] {
+        let unique: [Int] = Array(Set(list.map({$0.year})))
+        return unique.sorted { (a, b) -> Bool in
+            return a < b
+        }
+    }
 }

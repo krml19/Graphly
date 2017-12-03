@@ -21,7 +21,7 @@ class ScatterViewModel: NSObject {
         population = localDataProvider.models.populations[populationValue]
     
         let data = ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (model) -> (Bool) in
-            return model.year == year && model.population > population.min && model.population < population.max
+            return model.year == year && model.population >= population.min && model.population < population.max
         })
         log.debug("Year: \(year), population: \(population), elements: \(data.entryCount)")
         return data

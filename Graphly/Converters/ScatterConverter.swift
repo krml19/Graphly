@@ -12,7 +12,6 @@ class ScatterConverter {
     
     class func convert(input: Units, label: String?, filterClosure: FilteringClosure = ScatterConverter.defaultFilteringClosure) -> ScatterChartData {
         let filtered = input.list.filter(filterClosure)
-        
         let chartDataEntries = filtered.map({ChartDataEntry(x: Double($0.learnersNum), y: $0.salary.doubleValue)})
         let dataSet = ScatterChartDataSet(values: chartDataEntries, label: label)
         return ScatterChartData(dataSets: [dataSet])

@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="GridChartCollectionViewItem" customModule="Graphly" customModuleProvider="target">
             <connections>
                 <outlet property="scatterChartView" destination="lzG-NL-LO4" id="ICA-Q6-UYs"/>
+                <outlet property="titleOutlet" destination="fXO-s4-oib" id="CsT-eM-xua"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -19,14 +20,25 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="lzG-NL-LO4" customClass="ScatterChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+                    <rect key="frame" x="0.0" y="17" width="480" height="255"/>
                 </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-s4-oib">
+                    <rect key="frame" x="-2" y="0.0" width="484" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Q8Q-PC-Anm">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="lzG-NL-LO4" secondAttribute="bottom" id="RL1-Y6-pri"/>
                 <constraint firstItem="lzG-NL-LO4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="SAX-pV-a8F"/>
                 <constraint firstAttribute="trailing" secondItem="lzG-NL-LO4" secondAttribute="trailing" id="W0h-mw-A7g"/>
                 <constraint firstItem="lzG-NL-LO4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="dRM-hy-S6k"/>
+                <constraint firstAttribute="bottom" secondItem="fXO-s4-oib" secondAttribute="bottom" id="hHA-Au-OuQ"/>
+                <constraint firstItem="fXO-s4-oib" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="iZ3-Su-BWI"/>
+                <constraint firstAttribute="trailing" secondItem="fXO-s4-oib" secondAttribute="trailing" id="o98-va-kCf"/>
+                <constraint firstItem="fXO-s4-oib" firstAttribute="top" secondItem="lzG-NL-LO4" secondAttribute="bottom" id="tiy-x8-1BZ"/>
             </constraints>
         </customView>
     </objects>
