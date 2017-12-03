@@ -9,10 +9,10 @@
 import Foundation
 
 class LocalDataProvider {
-    typealias Completion = (([Unit], Error?)->())
+    typealias Completion = ((Units, Error?)->())
     private let filename: String
     private let ext: String
-    var models: [Unit] = []
+    var models: Units = Units()
     
     init(filename: String) {
         let components: [String] = filename.components(separatedBy: ".")
@@ -21,20 +21,20 @@ class LocalDataProvider {
     }
     
     func getModels(completion: Completion) {
-        if !models.isEmpty {
+        if !models.list.isEmpty {
             completion(models, nil)
         }
         
         guard let url  = Bundle.main.url(forResource: filename, withExtension: ext) else {
-            completion([], ParsingError(title: "File does not exist"))
+            completion(models, ParsingError(title: "File does not exist"))
             return
         }
         do {
             let data = try Data(contentsOf: url)
-            models = try JSONDecoder().decode([Unit].self, from: data)
+            models.list = try JSONDecoder().decode([Unit].self, from: data)
             completion(models, nil)
         } catch {
-            completion([], error)
+            completion(models, error)
         }
     }
 }

@@ -19,18 +19,33 @@ class GridChartViewController: NSViewController {
             collectionView.registerHeader(GridChartHeaderView.self)
 //            collectionView.minItemSize = NSSize(width: 200, height: 200)
 //            collectionView.maxItemSize = NSSize(width: 1000, height: 1000)
-            let flowLayout = NSCollectionViewFlowLayout()
+//            let flowLayout = NSCollectionViewFlowLayout()
             
-            flowLayout.itemSize = NSSize(width: 200, height: 200)
-            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
-//            flowLayout.minimumItemSize = NSSize(width: 200, height: 200)
-//            flowLayout.maximumItemSize = NSSize(width: 600, height: 600)
-//            flowLayout.maximumNumberOfColumns = 4
+//            flowLayout.itemSize = NSSize(width: 200, height: 200)
+//            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+////            flowLayout.minimumItemSize = NSSize(width: 200, height: 200)
+////            flowLayout.maximumItemSize = NSSize(width: 600, height: 600)
+////            flowLayout.maximumNumberOfColumns = 4
+//            flowLayout.minimumInteritemSpacing = 20.0
+//            flowLayout.minimumLineSpacing = 20.0
+//            flowLayout.sectionHeadersPinToVisibleBounds = true
+//            collectionView.collectionViewLayout = flowLayout
+//            view.wantsLayer = true
+
+            let flowLayout = NSCollectionViewGridLayout()
+            
+//            flowLayout.itemSize = NSSize(width: 200, height: 200)
+//            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+            flowLayout.minimumItemSize = NSSize(width: 200, height: 200)
+            flowLayout.maximumItemSize = NSSize(width: 600, height: 600)
+            flowLayout.maximumNumberOfColumns = 4
             flowLayout.minimumInteritemSpacing = 20.0
             flowLayout.minimumLineSpacing = 20.0
-            flowLayout.sectionHeadersPinToVisibleBounds = true
+//            flowLayout.sectionHeadersPinToVisibleBounds = true
             collectionView.collectionViewLayout = flowLayout
             view.wantsLayer = true
+
+            
             
         }
     

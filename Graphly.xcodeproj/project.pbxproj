@@ -42,6 +42,8 @@
 		F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E51FD32289002D237F /* ControllersInfoProvider.swift */; };
 		F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */; };
 		F24178EA1FD32A5D002D237F /* Notification+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E91FD32A5D002D237F /* Notification+Custom.swift */; };
+		F2595EED1FD435EA00946414 /* ScatterConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2595EEC1FD435EA00946414 /* ScatterConverter.swift */; };
+		F2595EEF1FD4566900946414 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2595EEE1FD4566900946414 /* Units.swift */; };
 		F2B5EE091FD342BB009F123E /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */; };
 		F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */; };
 		F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0C1FD3462E009F123E /* ViewModel.swift */; };
@@ -120,6 +122,8 @@
 		F24178E51FD32289002D237F /* ControllersInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersInfoProvider.swift; sourceTree = "<group>"; };
 		F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LastClassComponent.swift"; sourceTree = "<group>"; };
 		F24178E91FD32A5D002D237F /* Notification+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Custom.swift"; sourceTree = "<group>"; };
+		F2595EEC1FD435EA00946414 /* ScatterConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterConverter.swift; sourceTree = "<group>"; };
+		F2595EEE1FD4566900946414 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterViewModel.swift; sourceTree = "<group>"; };
 		F2B5EE0C1FD3462E009F123E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -347,9 +351,17 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F2595EE91FD4343000946414 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		F29175161FD34DB500D58C5E /* Converters */ = {
 			isa = PBXGroup;
 			children = (
+				F2595EEC1FD435EA00946414 /* ScatterConverter.swift */,
 			);
 			path = Converters;
 			sourceTree = "<group>";
@@ -375,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D36E551FD30A5B0036784E /* Unit.swift */,
+				F2595EEE1FD4566900946414 /* Units.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,6 +404,7 @@
 		F2D36E5D1FD30D5B0036784E /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				F2595EE91FD4343000946414 /* scripts */,
 				B4126D2148166EE6BF67AD8A /* Info.plist */,
 			);
 			path = "Supporting files";
@@ -766,7 +780,9 @@
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
 				F2319CA81FD35BE2002C422C /* GridChartCollectionViewItem.swift in Sources */,
 				F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */,
+				F2595EED1FD435EA00946414 /* ScatterConverter.swift in Sources */,
 				F2D36E611FD30F0A0036784E /* MenuViewModel.swift in Sources */,
+				F2595EEF1FD4566900946414 /* Units.swift in Sources */,
 				F2D36E561FD30A5B0036784E /* Unit.swift in Sources */,
 				F2319CB01FD35DED002C422C /* NSCollectionView+Autoregister.swift in Sources */,
 				F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */,
