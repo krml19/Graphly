@@ -19,6 +19,8 @@ class ScatterViewModel: NSObject {
     
     func prepareData(timelineValue: Int, populationValue: Int, completion: @escaping Completion) {
         let year = models.minYear + timelineValue
+        log.debug("Timeline value: \(timelineValue), populationValue: \(populationValue)")
+        
 //        let populationMin = 0
 //        let populationMax = 0
         

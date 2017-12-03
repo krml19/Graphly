@@ -773,16 +773,16 @@
                             </customView>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-Au-Nki">
                                 <rect key="frame" x="-2" y="20" width="454" height="24"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="jhf-Gf-DYh"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="10" allowsTickMarkValuesOnly="YES" sliderType="linear" id="jhf-Gf-DYh"/>
                                 <connections>
-                                    <action selector="populationValueChanged:" target="8Rq-PR-DPd" id="Q91-sa-MsW"/>
+                                    <action selector="populationValueChanged:" target="8Rq-PR-DPd" id="D0b-Z8-dla"/>
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8By-7E-ZGx">
                                 <rect key="frame" x="-2" y="-2" width="454" height="24"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="10" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Uj9-zT-GaI"/>
+                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Uj9-zT-GaI"/>
                                 <connections>
-                                    <action selector="timelineValueChanged:" target="8Rq-PR-DPd" id="2Cc-YZ-Tdt"/>
+                                    <action selector="timelineValueChanged:" target="8Rq-PR-DPd" id="WdX-yR-BGU"/>
                                 </connections>
                             </slider>
                         </subviews>

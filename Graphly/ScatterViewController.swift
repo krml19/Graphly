@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 class ScatterViewController: NSViewController {
-    let disposeBag = DisposeBag()
+    
     @IBOutlet weak var populationSlider: NSSlider!
     @IBOutlet weak var timelineSlider: NSSlider!
     @IBOutlet weak var scatterView: ScatterChartView! 
@@ -21,7 +21,7 @@ class ScatterViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scatterView.data = ScatterChartData(dataSets: [])
+        scatterView.data = ScatterChartData(dataSets: [ScatterChartDataSet(values: [ChartDataEntry(x: 0, y: 0)])])
         prepareData()
     }
     
@@ -36,10 +36,7 @@ class ScatterViewController: NSViewController {
 
 extension ScatterViewController {
     func prepareData() {
-        let timelineTick = Int(timelineSlider.closestTickMarkValue(toValue: timelineSlider.doubleValue))
-        let populationTick = Int(populationSlider.closestTickMarkValue(toValue: populationSlider.doubleValue))
-        
-        viewModel.prepareData(timelineValue: timelineTick, populationValue: populationTick) { [weak self] (scatterData) in
+        viewModel.prepareData(timelineValue: timelineSlider.tickValue(), populationValue: populationSlider.tickValue()) { [weak self] (scatterData) in
             DispatchQueue.main.async {
                 guard let strongSelf = self else { return }
 
@@ -49,3 +46,5 @@ extension ScatterViewController {
         }
     }
 }
+
+

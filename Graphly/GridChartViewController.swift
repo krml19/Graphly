@@ -11,7 +11,7 @@ import Charts
 
 class GridChartViewController: NSViewController {
     
-    let viewModel: GridChartViewModel = di.resolve(GridChartViewModel.self)
+    private let viewModel: GridChartViewModel = di.resolve(GridChartViewModel.self)
     
     @IBOutlet weak var collectionView: NSCollectionView! {
         didSet {
@@ -45,8 +45,6 @@ class GridChartViewController: NSViewController {
             collectionView.collectionViewLayout = flowLayout
             view.wantsLayer = true
 
-            
-            
         }
     
     }

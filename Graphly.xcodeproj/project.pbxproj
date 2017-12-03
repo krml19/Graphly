@@ -44,6 +44,7 @@
 		F24178EA1FD32A5D002D237F /* Notification+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E91FD32A5D002D237F /* Notification+Custom.swift */; };
 		F2595EED1FD435EA00946414 /* ScatterConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2595EEC1FD435EA00946414 /* ScatterConverter.swift */; };
 		F2595EEF1FD4566900946414 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2595EEE1FD4566900946414 /* Units.swift */; };
+		F2595EF11FD4719F00946414 /* NSSlider+Tick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2595EF01FD4719F00946414 /* NSSlider+Tick.swift */; };
 		F2B5EE091FD342BB009F123E /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */; };
 		F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */; };
 		F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0C1FD3462E009F123E /* ViewModel.swift */; };
@@ -124,6 +125,7 @@
 		F24178E91FD32A5D002D237F /* Notification+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Custom.swift"; sourceTree = "<group>"; };
 		F2595EEC1FD435EA00946414 /* ScatterConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterConverter.swift; sourceTree = "<group>"; };
 		F2595EEE1FD4566900946414 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		F2595EF01FD4719F00946414 /* NSSlider+Tick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSlider+Tick.swift"; sourceTree = "<group>"; };
 		F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterViewModel.swift; sourceTree = "<group>"; };
 		F2B5EE0C1FD3462E009F123E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -229,7 +231,6 @@
 		B4126D03B48A9BED397C9498 /* Graphly */ = {
 			isa = PBXGroup;
 			children = (
-				F23D0CAA1FD4172900F0E416 /* Resources */,
 				F29175161FD34DB500D58C5E /* Converters */,
 				F24178E41FD3227A002D237F /* Helpers */,
 				F2D36E6D1FD31A320036784E /* Extensions */,
@@ -321,13 +322,6 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
-		F23D0CAA1FD4172900F0E416 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		F23D0CB31FD4318500F0E416 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,13 +340,6 @@
 				F23D0CB11FD42B1A00F0E416 /* LocalDataProvider.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		F2595EE91FD4343000946414 /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = scripts;
 			sourceTree = "<group>";
 		};
 		F29175161FD34DB500D58C5E /* Converters */ = {
@@ -404,7 +391,6 @@
 				F23D0CAB1FD4173400F0E416 /* data.json */,
 				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
 				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
-				F2595EE91FD4343000946414 /* scripts */,
 				B4126D2148166EE6BF67AD8A /* Info.plist */,
 			);
 			path = "Supporting files";
@@ -451,6 +437,7 @@
 				F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */,
 				F2319CAF1FD35DED002C422C /* NSCollectionView+Autoregister.swift */,
 				F2319CB31FD36A85002C422C /* NSStoryboard+Instantiate.swift */,
+				F2595EF01FD4719F00946414 /* NSSlider+Tick.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -765,6 +752,7 @@
 			files = (
 				F23D0CAE1FD4277D00F0E416 /* MockDataProvider.swift in Sources */,
 				F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */,
+				F2595EF11FD4719F00946414 /* NSSlider+Tick.swift in Sources */,
 				F23D0CB21FD42B1A00F0E416 /* LocalDataProvider.swift in Sources */,
 				F2319CAC1FD35C3E002C422C /* GridChartCollectionViewModel.swift in Sources */,
 				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
