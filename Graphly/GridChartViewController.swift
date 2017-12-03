@@ -15,17 +15,23 @@ class GridChartViewController: NSViewController {
     
     @IBOutlet weak var collectionView: NSCollectionView! {
         didSet {
-            collectionView.minItemSize = NSSize(width: 200, height: 200)
-            collectionView.maxItemSize = NSSize(width: 1000, height: 1000)
-            // 1
+//            collectionView.register(GridChartCollectionViewItem.self)
+            collectionView.registerHeader(GridChartHeaderView.self)
+//            collectionView.minItemSize = NSSize(width: 200, height: 200)
+//            collectionView.maxItemSize = NSSize(width: 1000, height: 1000)
             let flowLayout = NSCollectionViewFlowLayout()
+            
             flowLayout.itemSize = NSSize(width: 200, height: 200)
             flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+//            flowLayout.minimumItemSize = NSSize(width: 200, height: 200)
+//            flowLayout.maximumItemSize = NSSize(width: 600, height: 600)
+//            flowLayout.maximumNumberOfColumns = 4
             flowLayout.minimumInteritemSpacing = 20.0
             flowLayout.minimumLineSpacing = 20.0
+            flowLayout.sectionHeadersPinToVisibleBounds = true
             collectionView.collectionViewLayout = flowLayout
-            // 2
             view.wantsLayer = true
+            
         }
     
     }
@@ -52,9 +58,30 @@ extension GridChartViewController: NSCollectionViewDataSource {
         cell.configure(viewModel: cellViewModel)
         return cell
     }
+    
+    func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: NSCollectionView.SupplementaryElementKind, at indexPath: IndexPath) -> NSView {
+        let view = collectionView.makeHeaderView(GridChartHeaderView.self, indexPath: indexPath)
+        guard let headerView = view as? GridChartHeaderView else { return view }
+        let headerViewModel = viewModel.dataSource.headerViewModel(indexPath: indexPath)
+        headerView.configure(viewModel: headerViewModel)
+
+        return headerView
+    }
 }
 
 extension GridChartViewController: NSCollectionViewDelegate {
     
-} 
+}
+
+extension ViewController : NSCollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
+        return NSSize(width: 1000, height: 40)
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
+        return NSSize(width: 200, height: 200)
+    }
+    
+    
+}
 

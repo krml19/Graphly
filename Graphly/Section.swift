@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Section<Item> {
-    let title: String
+class Section<Item, HeaderViewModel> {
+    let headerViewModel: HeaderViewModel
     let items: [Item]
     
-    init(title: String, items: [Item]) {
-        self.title = title
+    init(headerViewModel: HeaderViewModel, items: [Item]) {
+        self.headerViewModel = headerViewModel
         self.items = items
     }
 }

@@ -29,6 +29,11 @@
 		F2319CB01FD35DED002C422C /* NSCollectionView+Autoregister.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CAF1FD35DED002C422C /* NSCollectionView+Autoregister.swift */; };
 		F2319CB21FD362BC002C422C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CB11FD362BC002C422C /* Section.swift */; };
 		F2319CB41FD36A85002C422C /* NSStoryboard+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2319CB31FD36A85002C422C /* NSStoryboard+Instantiate.swift */; };
+		F23D0CA11FD40F3D00F0E416 /* Collection+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CA01FD40F3D00F0E416 /* Collection+Range.swift */; };
+		F23D0CA41FD4129200F0E416 /* GridChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CA31FD4129200F0E416 /* GridChartHeaderView.swift */; };
+		F23D0CA61FD412A700F0E416 /* GridChartHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23D0CA51FD412A700F0E416 /* GridChartHeaderView.xib */; };
+		F23D0CA81FD412C100F0E416 /* GridChartHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CA71FD412C100F0E416 /* GridChartHeaderViewModel.swift */; };
+		F23D0CAC1FD4173400F0E416 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F23D0CAB1FD4173400F0E416 /* data.json */; };
 		F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E21FD31DE3002D237F /* NSViewController+Child.swift */; };
 		F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E51FD32289002D237F /* ControllersInfoProvider.swift */; };
 		F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */; };
@@ -98,6 +103,11 @@
 		F2319CAF1FD35DED002C422C /* NSCollectionView+Autoregister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionView+Autoregister.swift"; sourceTree = "<group>"; };
 		F2319CB11FD362BC002C422C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		F2319CB31FD36A85002C422C /* NSStoryboard+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSStoryboard+Instantiate.swift"; sourceTree = "<group>"; };
+		F23D0CA01FD40F3D00F0E416 /* Collection+Range.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Range.swift"; sourceTree = "<group>"; };
+		F23D0CA31FD4129200F0E416 /* GridChartHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridChartHeaderView.swift; sourceTree = "<group>"; };
+		F23D0CA51FD412A700F0E416 /* GridChartHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridChartHeaderView.xib; sourceTree = "<group>"; };
+		F23D0CA71FD412C100F0E416 /* GridChartHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridChartHeaderViewModel.swift; sourceTree = "<group>"; };
+		F23D0CAB1FD4173400F0E416 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		F24178E21FD31DE3002D237F /* NSViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Child.swift"; sourceTree = "<group>"; };
 		F24178E51FD32289002D237F /* ControllersInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersInfoProvider.swift; sourceTree = "<group>"; };
 		F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LastClassComponent.swift"; sourceTree = "<group>"; };
@@ -207,6 +217,7 @@
 		B4126D03B48A9BED397C9498 /* Graphly */ = {
 			isa = PBXGroup;
 			children = (
+				F23D0CAA1FD4172900F0E416 /* Resources */,
 				F29175161FD34DB500D58C5E /* Converters */,
 				F24178E41FD3227A002D237F /* Helpers */,
 				F2D36E6D1FD31A320036784E /* Extensions */,
@@ -232,6 +243,7 @@
 		F211F1411FD2F96000382DAE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F23D0CA21FD4126D00F0E416 /* Headers */,
 				F2B5EE0E1FD34646009F123E /* Split */,
 				F2D36E621FD310780036784E /* Cells */,
 				F2D36E5F1FD30DEF0036784E /* Charts */,
@@ -285,6 +297,26 @@
 				F2319CAB1FD35C3E002C422C /* GridChartCollectionViewModel.swift */,
 			);
 			name = Grid;
+			sourceTree = "<group>";
+		};
+		F23D0CA21FD4126D00F0E416 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F23D0CA31FD4129200F0E416 /* GridChartHeaderView.swift */,
+				F23D0CA51FD412A700F0E416 /* GridChartHeaderView.xib */,
+				F23D0CA71FD412C100F0E416 /* GridChartHeaderViewModel.swift */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		F23D0CAA1FD4172900F0E416 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F23D0CAB1FD4173400F0E416 /* data.json */,
+				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
+				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F24178E41FD3227A002D237F /* Helpers */ = {
@@ -341,8 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				B4126D2148166EE6BF67AD8A /* Info.plist */,
-				B41260A1F8A76964A821AA16 /* Assets.xcassets */,
-				B41269D98DCDA5DFE9C29D17 /* Main.storyboard */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -380,6 +410,7 @@
 		F2D36E6D1FD31A320036784E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F23D0CA01FD40F3D00F0E416 /* Collection+Range.swift */,
 				F24178E91FD32A5D002D237F /* Notification+Custom.swift */,
 				F2D36E6E1FD31A4D0036784E /* NSTableView+Autoregister.swift */,
 				F24178E21FD31DE3002D237F /* NSViewController+Child.swift */,
@@ -506,6 +537,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23D0CA61FD412A700F0E416 /* GridChartHeaderView.xib in Resources */,
+				F23D0CAC1FD4173400F0E416 /* data.json in Resources */,
 				B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */,
 				B412621D0AD1932CC70FD024 /* Main.storyboard in Resources */,
 				F2319CA91FD35BE2002C422C /* GridChartCollectionViewItem.xib in Resources */,
@@ -703,6 +736,7 @@
 				F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */,
 				F2B5EE091FD342BB009F123E /* DataProvider.swift in Sources */,
 				F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */,
+				F23D0CA11FD40F3D00F0E416 /* Collection+Range.swift in Sources */,
 				F2319CB21FD362BC002C422C /* Section.swift in Sources */,
 				F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */,
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
@@ -718,7 +752,9 @@
 				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
 				F2319CB41FD36A85002C422C /* NSStoryboard+Instantiate.swift in Sources */,
 				B4126517A2CB8CD4BD4BFE18 /* DependencyInjection.swift in Sources */,
+				F23D0CA81FD412C100F0E416 /* GridChartHeaderViewModel.swift in Sources */,
 				F2D36E661FD310A70036784E /* MenuItemViewModel.swift in Sources */,
+				F23D0CA41FD4129200F0E416 /* GridChartHeaderView.swift in Sources */,
 				F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */,
 				F2319CAE1FD35CB0002C422C /* CollectionViewItem.swift in Sources */,
 				F2319CA01FD354BF002C422C /* GridChartViewModel.swift in Sources */,

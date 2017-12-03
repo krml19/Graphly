@@ -8,9 +8,9 @@
 
 import Foundation
 
-class CollectionDataSource<Item> {
-    let sections: [Section<Item>]
-    init(sections: [Section<Item>]) {
+class CollectionDataSource<Item, HeaderViewModel> {
+    let sections: [Section<Item, HeaderViewModel>]
+    init(sections: [Section<Item, HeaderViewModel>]) {
         self.sections = sections
     }
     
@@ -26,7 +26,7 @@ class CollectionDataSource<Item> {
         return sections[indexPath.section].items[indexPath.item]
     }
     
-    func title(indexPath: IndexPath) -> String {
-        return sections[indexPath.section].title
+    func headerViewModel(indexPath: IndexPath) -> HeaderViewModel {
+        return sections[indexPath.section].headerViewModel
     }
 }
