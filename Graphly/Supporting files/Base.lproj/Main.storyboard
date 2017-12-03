@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -718,18 +719,29 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="jsB-i5-n8y">
-                                <rect key="frame" x="10" y="10" width="430" height="280"/>
+                                <rect key="frame" x="10" y="10" width="430" height="249"/>
                             </containerView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f9L-br-4IC">
+                                <rect key="frame" x="204" y="269" width="43" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Title" id="GFP-i7-Vq4">
+                                    <font key="font" metaFont="systemMedium" size="17"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="f9L-br-4IC" firstAttribute="centerX" secondItem="3wa-pP-WOL" secondAttribute="centerX" id="4Ye-Bs-ruq"/>
                             <constraint firstAttribute="bottom" secondItem="jsB-i5-n8y" secondAttribute="bottom" constant="10" id="8He-4W-HSd"/>
-                            <constraint firstItem="jsB-i5-n8y" firstAttribute="top" secondItem="3wa-pP-WOL" secondAttribute="top" constant="10" id="BKK-v6-ytS"/>
                             <constraint firstAttribute="trailing" secondItem="jsB-i5-n8y" secondAttribute="trailing" constant="10" id="EKR-NB-mTZ"/>
+                            <constraint firstItem="jsB-i5-n8y" firstAttribute="top" secondItem="f9L-br-4IC" secondAttribute="bottom" constant="10" id="RLS-m0-RQ5"/>
+                            <constraint firstItem="f9L-br-4IC" firstAttribute="top" secondItem="3wa-pP-WOL" secondAttribute="top" constant="10" id="TXf-uc-HlW"/>
                             <constraint firstItem="jsB-i5-n8y" firstAttribute="leading" secondItem="3wa-pP-WOL" secondAttribute="leading" constant="10" id="e9z-BO-roT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="jsB-i5-n8y" id="2jC-ao-y45"/>
+                        <outlet property="titleOutlet" destination="f9L-br-4IC" id="fNB-1z-7e8"/>
                     </connections>
                 </viewController>
                 <customObject id="B97-vS-tt6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var containerView: NSView!
     
+    @IBOutlet weak var titleOutlet: NSTextField!
     lazy var gridChartViewController: GridChartViewController = {
         return storyboard?.instantiate(type: GridChartViewController.self)!
     }()!
@@ -32,7 +33,7 @@ class ViewController: NSViewController {
         }
        
         prepareView()
-        displayContentController(content: gridChartViewController, containerView: containerView)
+        prepareChildViewController(index: 0)
     }
     
     private func prepareView() {
@@ -45,12 +46,15 @@ class ViewController: NSViewController {
         guard di.resolve(ControllersInfoProvider.self).controllers.inRange(index: index) else { return }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.scatter.type {
             displayContentController(content: scatterViewController, containerView: containerView)
+            titleOutlet.stringValue = ControllersInfoProvider.Controllers.scatter.title
         }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.grid.type {
             displayContentController(content: gridChartViewController, containerView: containerView)
+            titleOutlet.stringValue = ControllersInfoProvider.Controllers.grid.title
         }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.heatMap.type {
             displayContentController(content: heatMapViewController, containerView: containerView)
+            titleOutlet.stringValue = ControllersInfoProvider.Controllers.heatMap.title
         }
     }
     

@@ -19,6 +19,7 @@ class ScatterViewController: NSViewController {
         didSet {
             scatterView.legend.enabled = false
             scatterView.chartDescription?.enabled = false
+            
         }
     }
     @IBOutlet weak var populationOutlet: NSTextField!

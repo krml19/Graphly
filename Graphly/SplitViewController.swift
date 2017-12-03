@@ -16,6 +16,6 @@ class SplitViewController: NSSplitViewController {
     @IBOutlet weak var menuItemOutlet: NSSplitViewItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        splitView.setPosition(200, ofDividerAt: 0)
+//        splitView.setPosition(200, ofDividerAt: 0)
     }
 }

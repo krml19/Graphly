@@ -10,7 +10,12 @@ import Foundation
 
 struct Units {
     var list: [Unit] = []
-    let populations: [(min: Int, max: Int)] = [(min: 0, max: 1000), (min: 1000, max: 10000), (min: 10000, max: 50000), (min: 50000, max: 100000), (min: 100000, max: 1000000), (min: Int(1e6), max: Int(2e6))]
+    let populations: [(min: Int, max: Int)] = [(min: Int(1e0), max: Int(5e4)),
+                                               (min: Int(5e4), max: Int(8e4)),
+                                               (min: Int(8e4), max: Int(1e5)),
+                                               (min: Int(1e5), max: Int(3e5)),
+                                               (min: Int(3e5), max: Int(7e5)),
+                                               (min: Int(7e5), max: Int(2e6))]
     
     
     var minYear: Int {

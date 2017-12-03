@@ -17,11 +17,22 @@ class ControllersInfoProvider {
         var menuItem: MenuItemViewModel {
             switch self {
             case .heatMap:
-                return MenuItemViewModel(title: "Heat Map")
+                return MenuItemViewModel(title: "Mapa ciepła")
             case .grid:
-                return MenuItemViewModel(title: "Grid")
+                return MenuItemViewModel(title: "Kratownica")
             case .scatter:
-                return MenuItemViewModel(title: "Scatter")
+                return MenuItemViewModel(title: "Wykres kropkowy")
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case .heatMap:
+                return "Wpływ średniego wynagrodzenia na liczbę osób uczących się dodatkowo j. obcego"
+            case .grid:
+                return "Wpływ średniego wynagrodzenia na liczbę osób uczących się dodatkowo j. obcego"
+            case .scatter:
+                return "Wpływ średniego wynagrodzenia na liczbę osób uczących się dodatkowo j. obcego"
             }
         }
         
