@@ -718,14 +718,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="jsB-i5-n8y">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="10" y="10" width="430" height="280"/>
                             </containerView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="jsB-i5-n8y" secondAttribute="bottom" id="8He-4W-HSd"/>
-                            <constraint firstItem="jsB-i5-n8y" firstAttribute="top" secondItem="3wa-pP-WOL" secondAttribute="top" id="BKK-v6-ytS"/>
-                            <constraint firstAttribute="trailing" secondItem="jsB-i5-n8y" secondAttribute="trailing" id="EKR-NB-mTZ"/>
-                            <constraint firstItem="jsB-i5-n8y" firstAttribute="leading" secondItem="3wa-pP-WOL" secondAttribute="leading" id="e9z-BO-roT"/>
+                            <constraint firstAttribute="bottom" secondItem="jsB-i5-n8y" secondAttribute="bottom" constant="10" id="8He-4W-HSd"/>
+                            <constraint firstItem="jsB-i5-n8y" firstAttribute="top" secondItem="3wa-pP-WOL" secondAttribute="top" constant="10" id="BKK-v6-ytS"/>
+                            <constraint firstAttribute="trailing" secondItem="jsB-i5-n8y" secondAttribute="trailing" constant="10" id="EKR-NB-mTZ"/>
+                            <constraint firstItem="jsB-i5-n8y" firstAttribute="leading" secondItem="3wa-pP-WOL" secondAttribute="leading" constant="10" id="e9z-BO-roT"/>
                         </constraints>
                     </view>
                     <connections>

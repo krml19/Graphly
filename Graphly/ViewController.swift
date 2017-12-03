@@ -11,11 +11,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var containerView: NSView! {
-        didSet {
-            displayContentController(content: gridChartViewController, containerView: containerView)
-        }
-    }
+    @IBOutlet weak var containerView: NSView!
     
     lazy var gridChartViewController: GridChartViewController = {
         return storyboard?.instantiate(type: GridChartViewController.self)!
@@ -31,9 +27,18 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(dispsatchNotification(notification:)), name: .onSegmentChanged, object: nil)
+        defer {
+            NotificationCenter.default.addObserver(self, selector: #selector(dispsatchNotification(notification:)), name: .onSegmentChanged, object: nil)
+        }
+       
+        prepareView()
+        displayContentController(content: gridChartViewController, containerView: containerView)
+    }
+    
+    private func prepareView() {
         containerView.wantsLayer = true
         containerView.layer?.backgroundColor = NSColor.white.cgColor
+        
     }
     
     func prepareChildViewController(index: Int) {
