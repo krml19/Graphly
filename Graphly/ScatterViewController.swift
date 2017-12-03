@@ -15,7 +15,12 @@ class ScatterViewController: NSViewController {
     
     @IBOutlet weak var populationSlider: NSSlider!
     @IBOutlet weak var timelineSlider: NSSlider!
-    @IBOutlet weak var scatterView: ScatterChartView!
+    @IBOutlet weak var scatterView: ScatterChartView! {
+        didSet {
+            scatterView.legend.enabled = false
+            scatterView.chartDescription?.enabled = false
+        }
+    }
     @IBOutlet weak var populationOutlet: NSTextField!
     @IBOutlet weak var yearOutlet: NSTextField!
     

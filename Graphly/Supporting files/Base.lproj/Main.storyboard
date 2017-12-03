@@ -800,23 +800,23 @@
                                 <rect key="frame" x="0.0" y="59" width="450" height="241"/>
                             </customView>
                             <slider verticalHuggingPriority="750" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-Au-Nki">
-                                <rect key="frame" x="148" y="30" width="304" height="24"/>
+                                <rect key="frame" x="198" y="30" width="254" height="24"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="10" allowsTickMarkValuesOnly="YES" sliderType="linear" id="jhf-Gf-DYh"/>
                                 <connections>
                                     <action selector="populationValueChanged:" target="8Rq-PR-DPd" id="D0b-Z8-dla"/>
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8By-7E-ZGx">
-                                <rect key="frame" x="148" y="8" width="304" height="24"/>
+                                <rect key="frame" x="198" y="8" width="254" height="24"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Uj9-zT-GaI"/>
                                 <connections>
                                     <action selector="timelineValueChanged:" target="8Rq-PR-DPd" id="WdX-yR-BGU"/>
                                 </connections>
                             </slider>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-pH-Kn8">
-                                <rect key="frame" x="-2" y="32" width="154" height="22"/>
+                                <rect key="frame" x="-2" y="32" width="204" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="02f-bt-2q1"/>
+                                    <constraint firstAttribute="width" constant="200" id="02f-bt-2q1"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rok:" id="w2l-Fu-oI2">
                                     <font key="font" metaFont="system"/>
@@ -825,7 +825,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-As-rCX">
-                                <rect key="frame" x="-2" y="10" width="154" height="17"/>
+                                <rect key="frame" x="-2" y="10" width="204" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ludność:" id="iiB-aE-VQO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

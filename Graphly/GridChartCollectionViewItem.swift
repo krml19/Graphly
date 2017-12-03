@@ -11,7 +11,12 @@ import Charts
 
 class GridChartCollectionViewItem: NSCollectionViewItem {
 
-    @IBOutlet weak var scatterChartView: ScatterChartView!
+    @IBOutlet weak var scatterChartView: ScatterChartView! {
+        didSet {
+            scatterChartView.legend.enabled = false
+            scatterChartView.chartDescription?.enabled = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
