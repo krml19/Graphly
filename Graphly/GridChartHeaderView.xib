@@ -19,7 +19,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="6dk-g4-L8o"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="border" alignment="center" title="Label" drawsBackground="YES" id="5ds-mx-LOo">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" drawsBackground="YES" id="5ds-mx-LOo">
                         <font key="font" metaFont="systemMedium" size="17"/>
                         <color key="textColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -28,8 +28,7 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="dwT-NK-7hO" secondAttribute="trailing" id="8RY-fh-X1p"/>
-                <constraint firstAttribute="bottom" secondItem="dwT-NK-7hO" secondAttribute="bottom" id="Qsk-Ut-Hb7"/>
-                <constraint firstItem="dwT-NK-7hO" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="WaE-n7-d5j"/>
+                <constraint firstItem="dwT-NK-7hO" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="iEU-V5-poc"/>
                 <constraint firstItem="dwT-NK-7hO" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="nTK-Ay-dSK"/>
             </constraints>
             <connections>
