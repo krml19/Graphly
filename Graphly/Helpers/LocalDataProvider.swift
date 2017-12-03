@@ -11,7 +11,7 @@ import Foundation
 class LocalDataProvider {
     private let filename: String
     private let ext: String
-    var models: Units = Units()
+    private(set) var models: Units = Units()
     
     init(filename: String) {
         let components: [String] = filename.components(separatedBy: ".")

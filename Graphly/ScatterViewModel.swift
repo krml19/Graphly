@@ -15,6 +15,7 @@ class ScatterViewModel: NSObject {
     
     func prepareData(timelineValue: Int, populationValue: Int) -> ScatterChartData {
         let year = localDataProvider.models.minYear + timelineValue
+        
         log.debug("Timeline value: \(timelineValue), populationValue: \(populationValue)")
             
         return ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (model) -> (Bool) in

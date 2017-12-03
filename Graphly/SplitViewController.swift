@@ -19,3 +19,7 @@ class SplitViewController: NSSplitViewController {
         
     }
 }
+
+extension SplitViewController {
+    
+}
