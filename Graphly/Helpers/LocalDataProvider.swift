@@ -9,7 +9,6 @@
 import Foundation
 
 class LocalDataProvider {
-    typealias Completion = ((Units, Error?)->())
     private let filename: String
     private let ext: String
     var models: Units = Units()
@@ -18,23 +17,19 @@ class LocalDataProvider {
         let components: [String] = filename.components(separatedBy: ".")
         self.filename = components[0]
         self.ext = components[1]
+        parseModels()
     }
     
-    func getModels(completion: Completion) {
-        if !models.list.isEmpty {
-            completion(models, nil)
-        }
-        
+    private func parseModels() {
         guard let url  = Bundle.main.url(forResource: filename, withExtension: ext) else {
-            completion(models, ParsingError(title: "File does not exist"))
+            log.error("Cannot parse")
             return
         }
         do {
             let data = try Data(contentsOf: url)
             models.list = try JSONDecoder().decode([Unit].self, from: data)
-            completion(models, nil)
         } catch {
-            completion(models, error)
+            log.error(error)
         }
     }
 }

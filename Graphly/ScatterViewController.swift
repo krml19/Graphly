@@ -21,7 +21,6 @@ class ScatterViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scatterView.data = ScatterChartData(dataSets: [ScatterChartDataSet(values: [ChartDataEntry(x: 0, y: 0)])])
         prepareData()
     }
     
@@ -36,14 +35,8 @@ class ScatterViewController: NSViewController {
 
 extension ScatterViewController {
     func prepareData() {
-        viewModel.prepareData(timelineValue: timelineSlider.tickValue(), populationValue: populationSlider.tickValue()) { [weak self] (scatterData) in
-            DispatchQueue.main.async {
-                guard let strongSelf = self else { return }
-
-                strongSelf.scatterView.data = scatterData
-                strongSelf.scatterView.notifyDataSetChanged()
-            }
-        }
+        scatterView.data = viewModel.prepareData(timelineValue: timelineSlider.tickValue(), populationValue: populationSlider.tickValue())
+        scatterView.notifyDataSetChanged()
     }
 }
 
