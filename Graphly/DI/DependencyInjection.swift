@@ -51,5 +51,8 @@ fileprivate extension DependencyInjection {
         
         container.register(GridChartViewModel.self) { _ -> GridChartViewModel in GridChartViewModel() }
             .inObjectScope(ObjectScope.container)
+        
+        container.register(HeatMapViewModel.self) { _ -> HeatMapViewModel in HeatMapViewModel() }
+            .inObjectScope(ObjectScope.container)
     }
 }

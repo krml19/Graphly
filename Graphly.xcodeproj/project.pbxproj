@@ -17,6 +17,7 @@
 		B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4126A90CFD09E5DC4D79F6F /* AppDelegate.swift */; };
 		B4126EBFF881BE4AB14E4274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B41260A1F8A76964A821AA16 /* Assets.xcassets */; };
 		C5E5783DE825AAD4A1FAB0E2 /* Pods_Graphly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C068B67DD5CBBF6A0AD1FE1 /* Pods_Graphly.framework */; };
+		E2FE43C31FD46C9A0032E79F /* HeatMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FE43C21FD46C9A0032E79F /* HeatMapViewModel.swift */; };
 		F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */; };
 		F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */; };
 		F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211F1461FD2FA0900382DAE /* GridChartViewController.swift */; };
@@ -98,6 +99,7 @@
 		B4126D2148166EE6BF67AD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0C8B1CC5CAF59970FD66D88 /* Pods-GraphlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.release.xcconfig"; sourceTree = "<group>"; };
 		E05DDE7CC2E51C9561AD6852 /* Pods-GraphlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphlyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphlyTests/Pods-GraphlyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2FE43C21FD46C9A0032E79F /* HeatMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMapViewModel.swift; sourceTree = "<group>"; };
 		F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeatMapViewController.swift; sourceTree = "<group>"; };
 		F211F1441FD2F9DB00382DAE /* ScatterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterViewController.swift; sourceTree = "<group>"; };
 		F211F1461FD2FA0900382DAE /* GridChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridChartViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,8 @@
 		F2319C9C1FD351A1002C422C /* Heat map */ = {
 			isa = PBXGroup;
 			children = (
+				F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */,
+				E2FE43C21FD46C9A0032E79F /* HeatMapViewModel.swift */,
 			);
 			name = "Heat map";
 			sourceTree = "<group>";
@@ -413,7 +417,6 @@
 				F2319C9D1FD351A9002C422C /* Grid */,
 				F2319C9C1FD351A1002C422C /* Heat map */,
 				F2B5EE0F1FD34653009F123E /* Scatter */,
-				F211F1421FD2F9B900382DAE /* HeatMapViewController.swift */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				F2D36E561FD30A5B0036784E /* Unit.swift in Sources */,
 				F2319CB01FD35DED002C422C /* NSCollectionView+Autoregister.swift in Sources */,
 				F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */,
+				E2FE43C31FD46C9A0032E79F /* HeatMapViewModel.swift in Sources */,
 				F2319CA31FD35980002C422C /* CollectionDataSource.swift in Sources */,
 				F2D36E6F1FD31A4D0036784E /* NSTableView+Autoregister.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,

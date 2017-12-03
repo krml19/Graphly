@@ -10,9 +10,18 @@ import Cocoa
 
 class HeatMapViewController: NSViewController {
 
+    
+    @IBOutlet weak var tableView: NSTableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
     
 }
+
+extension HeatMapViewController: NSTableViewDataSource, NSTableViewDelegate {
+
+}
+
+
