@@ -15,42 +15,27 @@ class GridChartViewController: NSViewController {
     
     @IBOutlet weak var collectionView: NSCollectionView! {
         didSet {
-//            collectionView.register(GridChartCollectionViewItem.self)
-            collectionView.registerHeader(GridChartHeaderView.self)
-//            collectionView.minItemSize = NSSize(width: 200, height: 200)
-//            collectionView.maxItemSize = NSSize(width: 1000, height: 1000)
-//            let flowLayout = NSCollectionViewFlowLayout()
-            
-//            flowLayout.itemSize = NSSize(width: 200, height: 200)
-//            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
-////            flowLayout.minimumItemSize = NSSize(width: 200, height: 200)
-////            flowLayout.maximumItemSize = NSSize(width: 600, height: 600)
-////            flowLayout.maximumNumberOfColumns = 4
-//            flowLayout.minimumInteritemSpacing = 20.0
-//            flowLayout.minimumLineSpacing = 20.0
-//            flowLayout.sectionHeadersPinToVisibleBounds = true
-//            collectionView.collectionViewLayout = flowLayout
-//            view.wantsLayer = true
-
-            let flowLayout = NSCollectionViewGridLayout()
-            
-//            flowLayout.itemSize = NSSize(width: 200, height: 200)
-//            flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
-            flowLayout.minimumItemSize = NSSize(width: 200, height: 200)
-            flowLayout.maximumItemSize = NSSize(width: 600, height: 600)
-            flowLayout.maximumNumberOfColumns = 4
-            flowLayout.minimumInteritemSpacing = 20.0
-            flowLayout.minimumLineSpacing = 20.0
-//            flowLayout.sectionHeadersPinToVisibleBounds = true
-            collectionView.collectionViewLayout = flowLayout
-            view.wantsLayer = true
-
+            collectionView.delegate = self
+            collectionView.dataSource = self
         }
     
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollectionView()
+        collectionView.reloadData()
+    }
+    
+    private func configureCollectionView() {
+        collectionView.registerHeader(GridChartHeaderView.self)
+        let flowLayout = NSCollectionViewFlowLayout()
+        flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+        flowLayout.minimumInteritemSpacing = 20.0
+        flowLayout.minimumLineSpacing = 20.0
+        flowLayout.sectionHeadersPinToVisibleBounds = true
+        collectionView.collectionViewLayout = flowLayout
+        view.wantsLayer = true
     }
     
 }
@@ -86,9 +71,13 @@ extension GridChartViewController: NSCollectionViewDelegate {
     
 }
 
-extension ViewController : NSCollectionViewDelegateFlowLayout {
+extension GridChartViewController : NSCollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
         return NSSize(width: 1000, height: 40)
+    }
+    
+    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForFooterInSection section: Int) -> NSSize {
+        return NSSize.zero
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
