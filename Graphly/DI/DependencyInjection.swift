@@ -33,7 +33,10 @@ fileprivate extension DependencyInjection {
         container.register(ControllersInfoProvider.self) { _ -> ControllersInfoProvider in ControllersInfoProvider() }
             .inObjectScope(ObjectScope.container)
         
-        container.register(DataProvider.self) { _ -> DataProvider in MockDataProvider() }
+        container.register(DataProviderProtocol.self) { _ -> DataProviderProtocol in MockDataProvider() }
+            .inObjectScope(ObjectScope.container)
+        
+        container.register(LocalDataProvider.self) { _ -> LocalDataProvider in LocalDataProvider(filename: "data.json")}
             .inObjectScope(ObjectScope.container)
     }
 }

@@ -34,11 +34,15 @@
 		F23D0CA61FD412A700F0E416 /* GridChartHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F23D0CA51FD412A700F0E416 /* GridChartHeaderView.xib */; };
 		F23D0CA81FD412C100F0E416 /* GridChartHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CA71FD412C100F0E416 /* GridChartHeaderViewModel.swift */; };
 		F23D0CAC1FD4173400F0E416 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F23D0CAB1FD4173400F0E416 /* data.json */; };
+		F23D0CAE1FD4277D00F0E416 /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CAD1FD4277D00F0E416 /* MockDataProvider.swift */; };
+		F23D0CB01FD427C000F0E416 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CAF1FD427C000F0E416 /* DataProvider.swift */; };
+		F23D0CB21FD42B1A00F0E416 /* LocalDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CB11FD42B1A00F0E416 /* LocalDataProvider.swift */; };
+		F23D0CB51FD4319500F0E416 /* ParsingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D0CB41FD4319500F0E416 /* ParsingError.swift */; };
 		F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E21FD31DE3002D237F /* NSViewController+Child.swift */; };
 		F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E51FD32289002D237F /* ControllersInfoProvider.swift */; };
 		F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */; };
 		F24178EA1FD32A5D002D237F /* Notification+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24178E91FD32A5D002D237F /* Notification+Custom.swift */; };
-		F2B5EE091FD342BB009F123E /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE081FD342BB009F123E /* DataProvider.swift */; };
+		F2B5EE091FD342BB009F123E /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */; };
 		F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */; };
 		F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0C1FD3462E009F123E /* ViewModel.swift */; };
 		F2D36E561FD30A5B0036784E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E551FD30A5B0036784E /* Unit.swift */; };
@@ -108,11 +112,15 @@
 		F23D0CA51FD412A700F0E416 /* GridChartHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridChartHeaderView.xib; sourceTree = "<group>"; };
 		F23D0CA71FD412C100F0E416 /* GridChartHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridChartHeaderViewModel.swift; sourceTree = "<group>"; };
 		F23D0CAB1FD4173400F0E416 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F23D0CAD1FD4277D00F0E416 /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
+		F23D0CAF1FD427C000F0E416 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		F23D0CB11FD42B1A00F0E416 /* LocalDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataProvider.swift; sourceTree = "<group>"; };
+		F23D0CB41FD4319500F0E416 /* ParsingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingError.swift; sourceTree = "<group>"; };
 		F24178E21FD31DE3002D237F /* NSViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSViewController+Child.swift"; sourceTree = "<group>"; };
 		F24178E51FD32289002D237F /* ControllersInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllersInfoProvider.swift; sourceTree = "<group>"; };
 		F24178E71FD3288C002D237F /* NSObject+LastClassComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+LastClassComponent.swift"; sourceTree = "<group>"; };
 		F24178E91FD32A5D002D237F /* Notification+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Custom.swift"; sourceTree = "<group>"; };
-		F2B5EE081FD342BB009F123E /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterViewModel.swift; sourceTree = "<group>"; };
 		F2B5EE0C1FD3462E009F123E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F2D36E551FD30A5B0036784E /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
@@ -319,11 +327,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F23D0CB31FD4318500F0E416 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				F23D0CB41FD4319500F0E416 /* ParsingError.swift */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
 		F24178E41FD3227A002D237F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				F24178E51FD32289002D237F /* ControllersInfoProvider.swift */,
-				F2B5EE081FD342BB009F123E /* DataProvider.swift */,
+				F2B5EE081FD342BB009F123E /* DataProviderProtocol.swift */,
+				F23D0CAD1FD4277D00F0E416 /* MockDataProvider.swift */,
+				F23D0CAF1FD427C000F0E416 /* DataProvider.swift */,
+				F23D0CB11FD42B1A00F0E416 /* LocalDataProvider.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -380,6 +399,7 @@
 		F2D36E5E1FD30DD30036784E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F23D0CB31FD4318500F0E416 /* Error */,
 				F2319CA11FD3596B002C422C /* Collection */,
 				B412643F7A2A7AAEC6A63082 /* ViewController.swift */,
 				F2B5EE0C1FD3462E009F123E /* ViewModel.swift */,
@@ -727,14 +747,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23D0CAE1FD4277D00F0E416 /* MockDataProvider.swift in Sources */,
 				F24178E31FD31DE3002D237F /* NSViewController+Child.swift in Sources */,
+				F23D0CB21FD42B1A00F0E416 /* LocalDataProvider.swift in Sources */,
 				F2319CAC1FD35C3E002C422C /* GridChartCollectionViewModel.swift in Sources */,
 				F211F1431FD2F9B900382DAE /* HeatMapViewController.swift in Sources */,
 				F211F1471FD2FA0900382DAE /* GridChartViewController.swift in Sources */,
 				F24178EA1FD32A5D002D237F /* Notification+Custom.swift in Sources */,
 				F2D36E6A1FD3128B0036784E /* MenuTableCellView.swift in Sources */,
 				F24178E81FD3288C002D237F /* NSObject+LastClassComponent.swift in Sources */,
-				F2B5EE091FD342BB009F123E /* DataProvider.swift in Sources */,
+				F2B5EE091FD342BB009F123E /* DataProviderProtocol.swift in Sources */,
 				F24178E61FD32289002D237F /* ControllersInfoProvider.swift in Sources */,
 				F23D0CA11FD40F3D00F0E416 /* Collection+Range.swift in Sources */,
 				F2319CB21FD362BC002C422C /* Section.swift in Sources */,
@@ -749,10 +771,12 @@
 				F2319CA31FD35980002C422C /* CollectionDataSource.swift in Sources */,
 				F2D36E6F1FD31A4D0036784E /* NSTableView+Autoregister.swift in Sources */,
 				B4126B6CB7EE0181AB465DA5 /* ViewController.swift in Sources */,
+				F23D0CB51FD4319500F0E416 /* ParsingError.swift in Sources */,
 				F211F1451FD2F9DB00382DAE /* ScatterViewController.swift in Sources */,
 				F2319CB41FD36A85002C422C /* NSStoryboard+Instantiate.swift in Sources */,
 				B4126517A2CB8CD4BD4BFE18 /* DependencyInjection.swift in Sources */,
 				F23D0CA81FD412C100F0E416 /* GridChartHeaderViewModel.swift in Sources */,
+				F23D0CB01FD427C000F0E416 /* DataProvider.swift in Sources */,
 				F2D36E661FD310A70036784E /* MenuItemViewModel.swift in Sources */,
 				F23D0CA41FD4129200F0E416 /* GridChartHeaderView.swift in Sources */,
 				F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */,

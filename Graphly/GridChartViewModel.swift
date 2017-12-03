@@ -14,7 +14,7 @@ class GridChartViewModel: ViewModel {
     var dataSource: CollectionDataSource<GridChartCollectionViewModel, GridChartHeaderViewModel> = {
         var items: [GridChartCollectionViewModel] = []
         for i in 0...20 {
-            items.append(GridChartCollectionViewModel(scatterData: di.resolve(DataProvider.self).scatterData))
+            items.append(GridChartCollectionViewModel(scatterData: di.resolve(DataProviderProtocol.self).scatterData))
         }
        
         let section0 = Section<GridChartCollectionViewModel, GridChartHeaderViewModel>(headerViewModel: GridChartHeaderViewModel(title: "0"), items: items)

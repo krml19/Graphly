@@ -11,7 +11,7 @@ import Charts
 
 class ScatterViewModel: NSObject {
     
-    var data: ScatterChartData = di.resolve(DataProvider.self).scatterData
+    var data: ScatterChartData = di.resolve(DataProviderProtocol.self).scatterData
     
     
 }
