@@ -11,7 +11,7 @@ target 'Graphly' do
   pod 'SnapKit', '~> 4.0.0'
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~> 4.0'
-
+  pod 'SwiftyBeaver', '~> 1.4'
 
   target 'GraphlyTests' do
     inherit! :search_paths
