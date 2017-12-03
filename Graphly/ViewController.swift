@@ -11,6 +11,12 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var containerView: NSView! {
+        didSet {
+            displayContentController(content: gridChartViewController, containerView: containerView)
+        }
+    }
+    
     lazy var gridChartViewController: GridChartViewController = {
         return storyboard?.instantiate(type: GridChartViewController.self)!
     }()!
@@ -26,18 +32,20 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(dispsatchNotification(notification:)), name: .onSegmentChanged, object: nil)
+        containerView.wantsLayer = true
+        containerView.layer?.backgroundColor = NSColor.white.cgColor
     }
     
     func prepareChildViewController(index: Int) {
         guard di.resolve(ControllersInfoProvider.self).controllers.inRange(index: index) else { return }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.scatter.type {
-            displayContentController(content: scatterViewController, containerView: view)
+            displayContentController(content: scatterViewController, containerView: containerView)
         }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.grid.type {
-            displayContentController(content: gridChartViewController, containerView: view)
+            displayContentController(content: gridChartViewController, containerView: containerView)
         }
         if di.resolve(ControllersInfoProvider.self).controllers[index] == ControllersInfoProvider.Controllers.heatMap.type {
-            displayContentController(content: heatMapViewController, containerView: view)
+            displayContentController(content: heatMapViewController, containerView: containerView)
         }
     }
     

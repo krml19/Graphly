@@ -20,7 +20,7 @@ extension NSViewController {
         content.view.frame = containerView.frame
         containerView.addSubview(content.view)
         content.view.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.edges.equalToSuperview().inset(10)
         }
         view.layout()
     }

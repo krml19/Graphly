@@ -15,7 +15,9 @@ class ScatterViewController: NSViewController {
     
     @IBOutlet weak var populationSlider: NSSlider!
     @IBOutlet weak var timelineSlider: NSSlider!
-    @IBOutlet weak var scatterView: ScatterChartView! 
+    @IBOutlet weak var scatterView: ScatterChartView!
+    @IBOutlet weak var populationOutlet: NSTextField!
+    @IBOutlet weak var yearOutlet: NSTextField!
     
     let viewModel: ScatterViewModel = di.resolve(ScatterViewModel.self)
     
@@ -39,6 +41,8 @@ extension ScatterViewController {
     func prepareData() {
         scatterView.data = viewModel.prepareData(timelineValue: timelineSlider.tickValue(), populationValue: populationSlider.tickValue())
         scatterView.notifyDataSetChanged()
+        yearOutlet.stringValue = "Rok: \(viewModel.year)"
+        populationOutlet.stringValue = "Ludność: \(viewModel.population.min) - \(viewModel.population.max)"
     }
 }
 

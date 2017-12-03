@@ -719,9 +719,6 @@
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="jsB-i5-n8y">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <connections>
-                                    <segue destination="DBm-06-ymk" kind="embed" id="9Es-x6-uhw"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <constraints>
@@ -731,6 +728,9 @@
                             <constraint firstItem="jsB-i5-n8y" firstAttribute="leading" secondItem="3wa-pP-WOL" secondAttribute="leading" id="e9z-BO-roT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="jsB-i5-n8y" id="2jC-ao-y45"/>
+                    </connections>
                 </viewController>
                 <customObject id="B97-vS-tt6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -797,43 +797,69 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="cXD-po-2bb" customClass="ScatterChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="44" width="450" height="256"/>
+                                <rect key="frame" x="0.0" y="59" width="450" height="241"/>
                             </customView>
-                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-Au-Nki">
-                                <rect key="frame" x="-2" y="20" width="454" height="24"/>
+                            <slider verticalHuggingPriority="750" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-Au-Nki">
+                                <rect key="frame" x="148" y="30" width="304" height="24"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="10" allowsTickMarkValuesOnly="YES" sliderType="linear" id="jhf-Gf-DYh"/>
                                 <connections>
                                     <action selector="populationValueChanged:" target="8Rq-PR-DPd" id="D0b-Z8-dla"/>
                                 </connections>
                             </slider>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8By-7E-ZGx">
-                                <rect key="frame" x="-2" y="-2" width="454" height="24"/>
+                                <rect key="frame" x="148" y="8" width="304" height="24"/>
                                 <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" numberOfTickMarks="6" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Uj9-zT-GaI"/>
                                 <connections>
                                     <action selector="timelineValueChanged:" target="8Rq-PR-DPd" id="WdX-yR-BGU"/>
                                 </connections>
                             </slider>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-pH-Kn8">
+                                <rect key="frame" x="-2" y="32" width="154" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="02f-bt-2q1"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rok:" id="w2l-Fu-oI2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-As-rCX">
+                                <rect key="frame" x="-2" y="10" width="154" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ludność:" id="iiB-aE-VQO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="8By-7E-ZGx" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="5El-bq-gPP"/>
                             <constraint firstItem="8By-7E-ZGx" firstAttribute="top" secondItem="1o3-Au-Nki" secondAttribute="bottom" id="B2g-KS-nCt"/>
                             <constraint firstItem="cXD-po-2bb" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="G2J-b0-Nba"/>
-                            <constraint firstAttribute="bottom" secondItem="8By-7E-ZGx" secondAttribute="bottom" id="H64-GI-dwD"/>
+                            <constraint firstItem="3eb-As-rCX" firstAttribute="top" secondItem="8By-7E-ZGx" secondAttribute="top" constant="5" id="GLS-WC-rZd"/>
+                            <constraint firstAttribute="bottom" secondItem="8By-7E-ZGx" secondAttribute="bottom" constant="10" id="H64-GI-dwD"/>
+                            <constraint firstItem="3eb-As-rCX" firstAttribute="bottom" secondItem="8By-7E-ZGx" secondAttribute="bottom" id="Nii-Hx-gdg"/>
                             <constraint firstAttribute="trailing" secondItem="1o3-Au-Nki" secondAttribute="trailing" id="aoo-ii-486"/>
-                            <constraint firstItem="1o3-Au-Nki" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="cmQ-ws-d1Z"/>
                             <constraint firstAttribute="trailing" secondItem="1o3-Au-Nki" secondAttribute="trailing" id="d8D-M3-cbV"/>
                             <constraint firstAttribute="trailing" secondItem="8By-7E-ZGx" secondAttribute="trailing" id="gZz-64-j3E"/>
-                            <constraint firstItem="1o3-Au-Nki" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="osw-XT-Pwm"/>
+                            <constraint firstItem="8By-7E-ZGx" firstAttribute="leading" secondItem="1o3-Au-Nki" secondAttribute="leading" id="ggy-8q-yfQ"/>
+                            <constraint firstItem="hrf-pH-Kn8" firstAttribute="top" secondItem="1o3-Au-Nki" secondAttribute="top" id="i4g-4N-tGE"/>
+                            <constraint firstItem="hrf-pH-Kn8" firstAttribute="leading" secondItem="9yb-SL-khs" secondAttribute="leading" id="iPJ-Oa-XaT"/>
+                            <constraint firstItem="3eb-As-rCX" firstAttribute="trailing" secondItem="hrf-pH-Kn8" secondAttribute="trailing" id="kUl-wb-X52"/>
                             <constraint firstAttribute="trailing" secondItem="cXD-po-2bb" secondAttribute="trailing" id="pH4-FE-rXR"/>
-                            <constraint firstItem="1o3-Au-Nki" firstAttribute="centerX" secondItem="9yb-SL-khs" secondAttribute="centerX" id="tRE-Pr-brp"/>
+                            <constraint firstItem="hrf-pH-Kn8" firstAttribute="bottom" secondItem="1o3-Au-Nki" secondAttribute="bottom" id="qEq-ME-fRa"/>
+                            <constraint firstItem="3eb-As-rCX" firstAttribute="leading" secondItem="hrf-pH-Kn8" secondAttribute="leading" id="qa2-Fs-RwM"/>
+                            <constraint firstItem="1o3-Au-Nki" firstAttribute="leading" secondItem="hrf-pH-Kn8" secondAttribute="trailing" id="saW-3c-0Sz"/>
                             <constraint firstItem="cXD-po-2bb" firstAttribute="top" secondItem="9yb-SL-khs" secondAttribute="top" id="xe7-dV-Itk"/>
-                            <constraint firstItem="1o3-Au-Nki" firstAttribute="top" secondItem="cXD-po-2bb" secondAttribute="bottom" id="yY1-az-qES"/>
+                            <constraint firstItem="1o3-Au-Nki" firstAttribute="top" secondItem="cXD-po-2bb" secondAttribute="bottom" constant="5" id="yY1-az-qES"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="populationOutlet" destination="3eb-As-rCX" id="V55-1d-9yh"/>
                         <outlet property="populationSlider" destination="1o3-Au-Nki" id="XuQ-v1-L8r"/>
                         <outlet property="scatterView" destination="cXD-po-2bb" id="o9p-Q3-ujA"/>
                         <outlet property="timelineSlider" destination="8By-7E-ZGx" id="uWn-4X-64X"/>
+                        <outlet property="yearOutlet" destination="hrf-pH-Kn8" id="ma9-gW-tHs"/>
                     </connections>
                 </viewController>
                 <customObject id="obI-za-sW7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
