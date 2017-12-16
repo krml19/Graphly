@@ -27,7 +27,8 @@ class GridChartViewModel: ViewModel {
                 
                 gridChartCollectionViewModels.append(GridChartCollectionViewModel(scatterData: scatterData, year: year, wireframe: wireframe, enabledLeftAxis: index == 0))
             }
-            let section: Section<GridChartCollectionViewModel, GridChartHeaderViewModel> = Section(headerViewModel: GridChartHeaderViewModel(title: "Ludność: \(min) - \(max)"), items: gridChartCollectionViewModels)
+            
+            let section: Section<GridChartCollectionViewModel, GridChartHeaderViewModel> = Section(headerViewModel: GridChartHeaderViewModel(title: "Ludność: \(FormatterHelper.convertRange(range: (min: min, max: max)))"), items: gridChartCollectionViewModels)
             sections.append(section)
         }
         

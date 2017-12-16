@@ -51,6 +51,7 @@
 		F2B5EE0B1FD34622009F123E /* ScatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */; };
 		F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5EE0C1FD3462E009F123E /* ViewModel.swift */; };
 		F2BE9E011FE54E7400F4C1D9 /* ScatterChartView+Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE9E001FE54E7400F4C1D9 /* ScatterChartView+Wireframe.swift */; };
+		F2BE9E051FE55D7E00F4C1D9 /* FormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE9E041FE55D7E00F4C1D9 /* FormatterHelper.swift */; };
 		F2D36E561FD30A5B0036784E /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E551FD30A5B0036784E /* Unit.swift */; };
 		F2D36E581FD30CD70036784E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E571FD30CD70036784E /* SplitViewController.swift */; };
 		F2D36E5A1FD30D280036784E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D36E591FD30D280036784E /* MenuViewController.swift */; };
@@ -135,6 +136,7 @@
 		F2B5EE0A1FD34622009F123E /* ScatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterViewModel.swift; sourceTree = "<group>"; };
 		F2B5EE0C1FD3462E009F123E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F2BE9E001FE54E7400F4C1D9 /* ScatterChartView+Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScatterChartView+Wireframe.swift"; sourceTree = "<group>"; };
+		F2BE9E041FE55D7E00F4C1D9 /* FormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterHelper.swift; sourceTree = "<group>"; };
 		F2D36E551FD30A5B0036784E /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		F2D36E571FD30CD70036784E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		F2D36E591FD30D280036784E /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				F23D0CAD1FD4277D00F0E416 /* MockDataProvider.swift */,
 				F23D0CAF1FD427C000F0E416 /* DataProvider.swift */,
 				F23D0CB11FD42B1A00F0E416 /* LocalDataProvider.swift */,
+				F2BE9E041FE55D7E00F4C1D9 /* FormatterHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				B4126B828A669853D77F4796 /* AppDelegate.swift in Sources */,
 				F2319CA81FD35BE2002C422C /* GridChartCollectionViewItem.swift in Sources */,
 				F2B5EE0D1FD3462E009F123E /* ViewModel.swift in Sources */,
+				F2BE9E051FE55D7E00F4C1D9 /* FormatterHelper.swift in Sources */,
 				F2595EED1FD435EA00946414 /* ScatterConverter.swift in Sources */,
 				F2D36E611FD30F0A0036784E /* MenuViewModel.swift in Sources */,
 				F2595EEF1FD4566900946414 /* Units.swift in Sources */,
