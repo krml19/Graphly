@@ -17,7 +17,8 @@ class GridChartCollectionViewItem: NSCollectionViewItem {
             scatterChartView.legend.enabled = false
             scatterChartView.chartDescription?.enabled = false
             scatterChartView.rightAxis.enabled = false
-            
+            scatterChartView.leftAxis.minWidth = Constants.Grid.yLabelWidth
+            scatterChartView.leftAxis.maxWidth = Constants.Grid.yLabelWidth
         }
     }
     

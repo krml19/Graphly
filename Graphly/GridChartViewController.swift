@@ -86,9 +86,9 @@ extension GridChartViewController : NSCollectionViewDelegateFlowLayout {
         let bounds = collectionView.bounds
         let padding = (collectionViewLayout as? NSCollectionViewFlowLayout)?.sectionInset ?? NSEdgeInsets.init()
         let itemsInSection = collectionView.numberOfItems(inSection: indexPath.section)
-        let height = (bounds.width - (padding.left + padding.right)) / CGFloat(itemsInSection)
-        let width = height
-        return NSSize(width: width, height: height)
+        let height = (bounds.width - (padding.left + padding.right + Constants.Grid.yLabelWidth)) / CGFloat(itemsInSection)
+        let width = indexPath.item == 0 ? height + Constants.Grid.yLabelWidth : (height)
+        return NSSize(width: width - 1, height: height)
     }
 }
 
