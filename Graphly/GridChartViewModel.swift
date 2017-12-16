@@ -19,12 +19,12 @@ class GridChartViewModel: ViewModel {
         var sections: [Section<GridChartCollectionViewModel, GridChartHeaderViewModel>] = []
         populations.forEach { (min, max) in
             var gridChartCollectionViewModels: [GridChartCollectionViewModel] = []
-            years.forEach({ (year) in
+            for (index, year) in years.enumerated() {
                 let scatterData = ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (unit) -> (Bool) in
                     return unit.year == year && unit.population >= min && unit.population < max
                 })
-                gridChartCollectionViewModels.append(GridChartCollectionViewModel(scatterData: scatterData, year: year))
-            })
+                gridChartCollectionViewModels.append(GridChartCollectionViewModel(scatterData: scatterData, year: year, enabledLeftAxis: index == 0))
+            }
             let section: Section<GridChartCollectionViewModel, GridChartHeaderViewModel> = Section(headerViewModel: GridChartHeaderViewModel(title: "Ludność: \(min) - \(max)"), items: gridChartCollectionViewModels)
             sections.append(section)
         }

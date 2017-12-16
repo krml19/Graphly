@@ -16,6 +16,7 @@ class GridChartCollectionViewItem: NSCollectionViewItem {
         didSet {
             scatterChartView.legend.enabled = false
             scatterChartView.chartDescription?.enabled = false
+            scatterChartView.rightAxis.enabled = false
         }
     }
     
@@ -26,5 +27,7 @@ class GridChartCollectionViewItem: NSCollectionViewItem {
     func configure(viewModel: GridChartCollectionViewModel) {
         scatterChartView.data = viewModel.scatterData
         titleOutlet.stringValue = "\(viewModel.year)"
+        scatterChartView.leftAxis.drawLabelsEnabled = viewModel.enabledLeftAxis
+        
     }
 }
