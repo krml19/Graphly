@@ -16,8 +16,6 @@ class MenuViewController: NSViewController {
         didSet {
             tableView.register(MenuTableCellView.self)
             tableView.rowHeight = 40
-            let indexSet = NSIndexSet(index: 0)
-            tableView.selectRowIndexes(indexSet as IndexSet, byExtendingSelection: false)
         }
     }
     @IBOutlet weak var scrollView: NSScrollView!
@@ -25,7 +23,8 @@ class MenuViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
+        let indexSet = NSIndexSet(index: 0)
+        tableView.selectRowIndexes(indexSet as IndexSet, byExtendingSelection: false)
     }
 }
 

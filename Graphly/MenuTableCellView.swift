@@ -16,4 +16,6 @@ class MenuTableCellView: NSTableCellView {
         titleOutlet.stringValue = viewModel.title
     }
     
+    
+    
 }

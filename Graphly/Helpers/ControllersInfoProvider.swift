@@ -21,7 +21,7 @@ class ControllersInfoProvider {
             case .grid:
                 return MenuItemViewModel(title: "Kratownica")
             case .scatter:
-                return MenuItemViewModel(title: "Wykres kropkowy")
+                return MenuItemViewModel(title: "Wykres punktowy")
             }
         }
         

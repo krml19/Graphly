@@ -48,7 +48,7 @@ extension ScatterViewController {
         scatterView.data = viewModel.prepareData(timelineValue: timelineSlider.tickValue(), populationValue: populationSlider.tickValue())
         scatterView.notifyDataSetChanged()
         yearOutlet.stringValue = "Rok: \(viewModel.year)"
-        populationOutlet.stringValue = "Ludność: \(viewModel.population.min) - \(viewModel.population.max)"
+        populationOutlet.stringValue = "Ludność: \(FormatterHelper.convertRange(range: viewModel.population))"
     }
 }
 

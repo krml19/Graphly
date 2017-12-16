@@ -12,6 +12,11 @@ class GridChartHeaderView: NSView {
 
     @IBOutlet weak var titleOutlet: NSTextField!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        titleOutlet.backgroundColor = Constants.Menu.selectionColor
+    }
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
@@ -20,5 +25,4 @@ class GridChartHeaderView: NSView {
     public func configure(viewModel: GridChartHeaderViewModel) {
         titleOutlet.stringValue = viewModel.title
     }
-    
 }

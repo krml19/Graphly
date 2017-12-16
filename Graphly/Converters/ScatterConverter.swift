@@ -14,8 +14,8 @@ class ScatterConverter {
         let filtered = input.list.filter(filterClosure)
         let chartDataEntries = filtered.map({ChartDataEntry(x: $0.salary.doubleValue, y: Double($0.learnersNum))})
         let dataSet = ScatterChartDataSet(values: chartDataEntries, label: label)
-        dataSet.setColor(NSUIColor.blue.withAlphaComponent(0.4))
-        dataSet.scatterShapeSize = 7.0
+        dataSet.setColor(Constants.Scatter.scatterColor)
+        dataSet.scatterShapeSize = Constants.Scatter.scatterShapeSize
         dataSet.drawValuesEnabled = false
         
         dataSet.setScatterShape(.circle)
