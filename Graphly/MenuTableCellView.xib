@@ -10,11 +10,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe" customClass="MenuTableCellView" customModule="Graphly" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="170"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="233"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField canDrawConcurrently="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CqK-kN-7N2">
-                    <rect key="frame" x="-2" y="75" width="484" height="21"/>
+                    <rect key="frame" x="3" y="106" width="474" height="21"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Label" id="yr9-Qz-8Kd">
                         <font key="font" metaFont="system" size="17"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -26,14 +26,14 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="CqK-kN-7N2" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="3gQ-k3-2KG"/>
-                <constraint firstAttribute="trailing" secondItem="CqK-kN-7N2" secondAttribute="trailing" id="Bwj-ll-MRH"/>
-                <constraint firstItem="CqK-kN-7N2" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="cLv-pX-kK6"/>
+                <constraint firstItem="CqK-kN-7N2" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="2fd-wg-zEA"/>
+                <constraint firstAttribute="trailing" secondItem="CqK-kN-7N2" secondAttribute="trailing" constant="5" id="VO2-W8-X1B"/>
+                <constraint firstItem="CqK-kN-7N2" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="5" id="rnX-na-ViA"/>
             </constraints>
             <connections>
                 <outlet property="titleOutlet" destination="CqK-kN-7N2" id="8hQ-TH-PHm"/>
             </connections>
-            <point key="canvasLocation" x="140" y="243"/>
+            <point key="canvasLocation" x="140" y="125.5"/>
         </customView>
     </objects>
 </document>

@@ -14,8 +14,10 @@ class SplitViewController: NSSplitViewController {
     
     @IBOutlet weak var chartsItemOutlet: NSSplitViewItem!
     @IBOutlet weak var menuItemOutlet: NSSplitViewItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        splitView.setPosition(150, ofDividerAt: 0)
+        view.translatesAutoresizingMaskIntoConstraints = true
+        
     }
 }
