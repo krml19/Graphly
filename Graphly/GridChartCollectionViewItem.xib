@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,10 +20,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="lzG-NL-LO4" customClass="ScatterChartView" customModule="Charts">
-                    <rect key="frame" x="0.0" y="17" width="480" height="255"/>
+                    <rect key="frame" x="0.0" y="27" width="480" height="235"/>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fXO-s4-oib">
-                    <rect key="frame" x="-2" y="0.0" width="484" height="17"/>
+                    <rect key="frame" x="-2" y="10" width="484" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Q8Q-PC-Anm">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -34,8 +34,8 @@
             <constraints>
                 <constraint firstItem="lzG-NL-LO4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="SAX-pV-a8F"/>
                 <constraint firstAttribute="trailing" secondItem="lzG-NL-LO4" secondAttribute="trailing" id="W0h-mw-A7g"/>
-                <constraint firstItem="lzG-NL-LO4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="dRM-hy-S6k"/>
-                <constraint firstAttribute="bottom" secondItem="fXO-s4-oib" secondAttribute="bottom" id="hHA-Au-OuQ"/>
+                <constraint firstItem="lzG-NL-LO4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="dRM-hy-S6k"/>
+                <constraint firstAttribute="bottom" secondItem="fXO-s4-oib" secondAttribute="bottom" constant="10" id="hHA-Au-OuQ"/>
                 <constraint firstItem="fXO-s4-oib" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="iZ3-Su-BWI"/>
                 <constraint firstAttribute="trailing" secondItem="fXO-s4-oib" secondAttribute="trailing" id="o98-va-kCf"/>
                 <constraint firstItem="fXO-s4-oib" firstAttribute="top" secondItem="lzG-NL-LO4" secondAttribute="bottom" id="tiy-x8-1BZ"/>

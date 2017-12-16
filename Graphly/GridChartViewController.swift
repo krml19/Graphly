@@ -31,12 +31,17 @@ class GridChartViewController: NSViewController {
         collectionView.registerHeader(GridChartHeaderView.self)
         let flowLayout = NSCollectionViewFlowLayout()
         
-        flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
+        flowLayout.sectionInset = NSEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 20.0)
         flowLayout.minimumInteritemSpacing = 0.0
         flowLayout.minimumLineSpacing = 0.0
         flowLayout.sectionHeadersPinToVisibleBounds = true
         collectionView.collectionViewLayout = flowLayout
         view.wantsLayer = true
+    }
+    
+    override func viewWillLayout() {
+        super.viewWillLayout()
+        collectionView.collectionViewLayout?.invalidateLayout()
     }
     
 }
@@ -74,17 +79,16 @@ extension GridChartViewController: NSCollectionViewDelegate {
 
 extension GridChartViewController : NSCollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> NSSize {
-        return NSSize(width: 1000, height: 40)
-    }
-    
-    func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, referenceSizeForFooterInSection section: Int) -> NSSize {
-        return NSSize.zero
+        return NSSize(width: 1000, height: 20)
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {
-        return NSSize(width: 200, height: 200)
+        let bounds = collectionView.bounds
+        let padding = (collectionViewLayout as? NSCollectionViewFlowLayout)?.sectionInset ?? NSEdgeInsets.init()
+        let itemsInSection = collectionView.numberOfItems(inSection: indexPath.section)
+        let height = (bounds.width - (padding.left + padding.right)) / CGFloat(itemsInSection)
+        let width = height
+        return NSSize(width: width, height: height)
     }
-    
-    
 }
 
