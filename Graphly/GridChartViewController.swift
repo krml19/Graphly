@@ -30,9 +30,10 @@ class GridChartViewController: NSViewController {
     private func configureCollectionView() {
         collectionView.registerHeader(GridChartHeaderView.self)
         let flowLayout = NSCollectionViewFlowLayout()
+        
         flowLayout.sectionInset = NSEdgeInsets(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0)
         flowLayout.minimumInteritemSpacing = 0.0
-        flowLayout.minimumLineSpacing = 20.0
+        flowLayout.minimumLineSpacing = 0.0
         flowLayout.sectionHeadersPinToVisibleBounds = true
         collectionView.collectionViewLayout = flowLayout
         view.wantsLayer = true

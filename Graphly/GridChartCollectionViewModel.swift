@@ -13,9 +13,12 @@ class GridChartCollectionViewModel {
     let scatterData: ScatterChartData
     let year: Int
     let enabledLeftAxis: Bool
-    init(scatterData: ScatterChartData, year: Int, enabledLeftAxis: Bool = false) {
+    let wireframe: Wireframe
+    
+    init(scatterData: ScatterChartData, year: Int, wireframe: Wireframe, enabledLeftAxis: Bool = false) {
         self.scatterData = scatterData
         self.year = year
         self.enabledLeftAxis = enabledLeftAxis
+        self.wireframe = wireframe
     }
 }

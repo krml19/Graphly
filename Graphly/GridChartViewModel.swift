@@ -15,6 +15,7 @@ class GridChartViewModel: ViewModel {
         let localDataProvider: LocalDataProvider = di.resolve(LocalDataProvider.self)
         let years = localDataProvider.models.years
         let populations = localDataProvider.models.populations
+        let wireframe: Wireframe = ScatterConverter.wireframe(localDataProvider.models)
         
         var sections: [Section<GridChartCollectionViewModel, GridChartHeaderViewModel>] = []
         populations.forEach { (min, max) in
@@ -23,7 +24,8 @@ class GridChartViewModel: ViewModel {
                 let scatterData = ScatterConverter.convert(input: localDataProvider.models, label: nil, filterClosure: { (unit) -> (Bool) in
                     return unit.year == year && unit.population >= min && unit.population < max
                 })
-                gridChartCollectionViewModels.append(GridChartCollectionViewModel(scatterData: scatterData, year: year, enabledLeftAxis: index == 0))
+                
+                gridChartCollectionViewModels.append(GridChartCollectionViewModel(scatterData: scatterData, year: year, wireframe: wireframe, enabledLeftAxis: index == 0))
             }
             let section: Section<GridChartCollectionViewModel, GridChartHeaderViewModel> = Section(headerViewModel: GridChartHeaderViewModel(title: "Ludność: \(min) - \(max)"), items: gridChartCollectionViewModels)
             sections.append(section)

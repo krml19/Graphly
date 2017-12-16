@@ -36,4 +36,22 @@ struct Units {
             return a < b
         }
     }
+    
+    var minSalary: Double {
+        return list.map({$0.salary.doubleValue}).min() ?? 0.0
+    }
+    
+    var maxSalary: Double {
+        return list.map({$0.salary.doubleValue}).max() ?? 0.0
+    }
+    
+    var minLearners: Double {
+        let min = list.map({$0.learnersNum}).min() ?? 0
+        return Double(min)
+    }
+    
+    var maxLearners: Double {
+        let max = list.map({$0.learnersNum}).max() ?? 0
+        return Double(max)
+    }
 }

@@ -16,6 +16,14 @@ class ScatterConverter {
         let dataSet = ScatterChartDataSet(values: chartDataEntries, label: label)
         return ScatterChartData(dataSets: [dataSet])
     }
+    
+    class func wireframe(_ units: Units) -> Wireframe {
+        let minY: Double = units.minLearners
+        let maxY: Double = units.maxLearners
+        let minX: Double = units.minSalary
+        let maxX: Double = units.maxSalary
+        return (minX: minX, maxX: maxX, minY: minY, maxY: maxY)
+    }
 }
 
 extension ScatterConverter {
