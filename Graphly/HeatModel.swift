@@ -17,5 +17,10 @@ class HeatModel {
         self.yearIndex = yearIndex
         self.populationIndex = populationIndex
         self.ratio = Float(unit.learnersNum)/Float(unit.salary)
+        if ratio == 0.0 {
+            log.error(ratio)
+            print(unit.learnersNum)
+            print(unit.salary)
+        }
     }
 }

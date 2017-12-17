@@ -12,6 +12,8 @@ import Cocoa
 class HeatMapViewModel {
     
     var heatModels = [HeatModel]()
+    var minRatio: Float?
+    var maxRatio: Float?
     
     let units: Units = {
         return di.resolve(LocalDataProvider.self).models
@@ -21,6 +23,8 @@ class HeatMapViewModel {
         for unit in units.list {
             heatModels.append(HeatModel(unit: unit,yearIndex: getYearIndex(unit: unit) , populationIndex: getPopulationIndex(unit: unit)))
         }
+        minRatio = heatModels.map{ $0.ratio }.min()
+        maxRatio = heatModels.map{ $0.ratio }.max()
     }
     
     func getRatioFor(row: Int, column: Int) -> Float {
@@ -32,7 +36,12 @@ class HeatMapViewModel {
             count += 1
         }
         
-        if count != 0 { return ratioSum/count} else { return 0.0 }
+        if count != 0 {
+            let ratio = ratioSum/count
+            return ratioSum/count}
+        else {
+            return 0.0
+        }
     }
     
     private func getYearIndex(unit: Unit) -> Int {
@@ -54,8 +63,13 @@ class HeatMapViewModel {
     
     func getColorFor(row: Int, column: Int) -> CGColor {
         let ratio = getRatioFor(row: row, column: column)
+        return getColorFor(ratio: ratio)
+    }
+    
+    func getColorFor(ratio: Float) -> CGColor {
         var color: CGColor
-        color = (ratio != 0.0) ? CGColor.init(gray: CGFloat(1-ratio/5.4), alpha: 1.0) : NSColor.red.cgColor
+        guard let maxRatio = maxRatio else { return NSColor.red.cgColor }
+        color = (ratio != 0.0) ? CGColor.init(gray: CGFloat(1-ratio/maxRatio), alpha: 1.0) : NSColor.white.cgColor
         return color
     }
 }
