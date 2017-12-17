@@ -10,10 +10,14 @@ import Cocoa
 
 class HeatMapViewController: NSViewController {
 
-    private let viewModel = HeatMapViewModel()
+    private let viewModel:HeatMapViewModel = HeatMapViewModel()
+    private let numFormatter = NumberFormatter()
     
     @IBOutlet weak var tableView: NSTableView! {
         didSet {
+            let firstColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "populations"))
+            firstColumn.headerCell.title = ""
+            tableView.addTableColumn(firstColumn)
             let years = Array(viewModel.units.minYear ... viewModel.units.maxYear)
             for year in years {
                 let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: String(year)))
@@ -32,15 +36,10 @@ class HeatMapViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
+        viewModel.delegate = self
+        viewModel.loadData()
         prepareUI()
     }
-    
-//    override func viewDidLayout() {
-//        tableView.reloadData()
-//    }
 }
 
 extension HeatMapViewController: NSTableViewDataSource, NSTableViewDelegate {
@@ -50,12 +49,24 @@ extension HeatMapViewController: NSTableViewDataSource, NSTableViewDelegate {
     }
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = NSView()
-        cell.wantsLayer = true
-        cell.layer?.backgroundColor = viewModel.getColorFor(row: row, column: tableView.tableColumns.index(of: tableColumn!)!)
-        tableColumn?.minWidth = tableView.frame.width/CGFloat(viewModel.units.years.count)
-        tableColumn?.width = tableView.frame.width/CGFloat(viewModel.units.years.count)
-        return cell
+        if tableView.tableColumns.index(of: tableColumn!)! == 0 {
+            let population = viewModel.units.populations[row]
+            let min = numFormatter.string(for: population.min)
+            let max = numFormatter.string(for: population.max)
+            let label = NSTextField.init(wrappingLabelWithString: "\(String(describing: min!))- \(String(describing: max!))")
+            label.alignment = .right
+            label.font = NSFont.systemFont(ofSize: 10.0, weight: .thin)
+            tableColumn?.minWidth = tableView.frame.width/(CGFloat(viewModel.units.years.count)+1)
+            tableColumn?.width = tableView.frame.width/(CGFloat(viewModel.units.years.count)+1)
+            return label
+        } else {
+            let cell = NSView()
+            cell.wantsLayer = true
+            cell.layer?.backgroundColor = viewModel.getColorFor(row: row, column: (tableView.tableColumns.index(of: tableColumn!)! - 1 ))
+            tableColumn?.minWidth = tableView.frame.width/(CGFloat(viewModel.units.years.count)+1)
+            tableColumn?.width = tableView.frame.width/(CGFloat(viewModel.units.years.count)+1)
+            return cell
+        }
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
@@ -63,12 +74,19 @@ extension HeatMapViewController: NSTableViewDataSource, NSTableViewDelegate {
     }
 }
 
+extension HeatMapViewController: HeatMapViewModelDelegate {
+    func didFinishLoadingData() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        prepareLegend()
+    }
+}
+
 extension HeatMapViewController {
     private func prepareUI() {
-//        applyGradient()
+        prepareFormatter()
         configureLabels()
         prepareTableView()
-        prepareLegend()
     }
     
     private func prepareTableView() {
@@ -77,14 +95,10 @@ extension HeatMapViewController {
         tableView.rowSizeStyle = .large
     }
     
-//    private func applyGradient() {
-//        let colorTop = NSColor(red: 48 / 255, green: 35 / 255, blue: 174 / 255, alpha: 1).cgColor
-//        let colorBottom = NSColor(red: 200 / 255, green: 109 / 255, blue: 215 / 255, alpha: 1).cgColor
-//        let gradient  = CAGradientLayer()
-//        gradient.colors = [ colorTop, colorBottom]
-//        gradient.locations = [ 0.0, 1.0]
-//        heatLegend.layer = gradient
-//    }
+    private func prepareFormatter() {
+        numFormatter.numberStyle = .decimal
+        numFormatter.locale = NSLocale(localeIdentifier: "pl") as Locale!
+    }
     
     private func configureLabels() {
         yAxisLabel.frameRotation = 90.0

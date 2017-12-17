@@ -9,7 +9,13 @@
 import Foundation
 import Cocoa
 
+protocol HeatMapViewModelDelegate {
+    func didFinishLoadingData()
+}
+
 class HeatMapViewModel {
+    
+    var delegate: HeatMapViewModelDelegate?
     
     var heatModels = [HeatModel]()
     var minRatio: Float?
@@ -19,12 +25,18 @@ class HeatMapViewModel {
         return di.resolve(LocalDataProvider.self).models
     }()
     
-    init() {
-        for unit in units.list {
-            heatModels.append(HeatModel(unit: unit,yearIndex: getYearIndex(unit: unit) , populationIndex: getPopulationIndex(unit: unit)))
+    
+    func loadData() {
+        DispatchQueue.global().async {
+            for unit in self.units.list {
+                self.heatModels.append(HeatModel(unit: unit,yearIndex: self.getYearIndex(unit: unit) , populationIndex: self.getPopulationIndex(unit: unit)))
+            }
+            self.minRatio = self.heatModels.map{ $0.ratio }.min()
+            self.maxRatio = self.heatModels.map{ $0.ratio }.max()
+            DispatchQueue.main.async {
+                self.delegate?.didFinishLoadingData()
+            }
         }
-        minRatio = heatModels.map{ $0.ratio }.min()
-        maxRatio = heatModels.map{ $0.ratio }.max()
     }
     
     func getRatioFor(row: Int, column: Int) -> Float {
@@ -37,7 +49,6 @@ class HeatMapViewModel {
         }
         
         if count != 0 {
-            let ratio = ratioSum/count
             return ratioSum/count}
         else {
             return 0.0
