@@ -864,6 +864,18 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="SZh-FL-fnm">
+                                <rect key="frame" x="0.0" y="0.0" width="560" height="450"/>
+                                <subviews>
+                                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="rPH-ZR-e29">
+                                        <rect key="frame" x="272" y="217" width="16" height="16"/>
+                                    </progressIndicator>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rPH-ZR-e29" firstAttribute="centerY" secondItem="SZh-FL-fnm" secondAttribute="centerY" id="Hx1-YY-9cp"/>
+                                    <constraint firstItem="rPH-ZR-e29" firstAttribute="centerX" secondItem="SZh-FL-fnm" secondAttribute="centerX" id="m8u-rf-TW2"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="3He-yH-EkW" firstAttribute="leading" secondItem="cnf-xz-UEu" secondAttribute="trailing" constant="17" id="1JD-hM-3f4"/>
@@ -871,12 +883,15 @@
                             <constraint firstItem="4YI-Ae-OJG" firstAttribute="centerX" secondItem="QrY-RJ-oVd" secondAttribute="centerX" id="BT4-V7-FSS"/>
                             <constraint firstItem="Bdv-id-CmI" firstAttribute="top" secondItem="gQN-Pm-Mkn" secondAttribute="bottom" id="GIC-N0-IPT"/>
                             <constraint firstItem="Gql-mR-kwb" firstAttribute="centerY" secondItem="peU-2q-DkM" secondAttribute="centerY" id="IC6-bu-atD"/>
+                            <constraint firstAttribute="bottom" secondItem="SZh-FL-fnm" secondAttribute="bottom" id="JNc-aA-5Cj"/>
                             <constraint firstItem="Gql-mR-kwb" firstAttribute="top" secondItem="yTz-Ty-c3a" secondAttribute="bottom" id="KYe-SF-lNc"/>
                             <constraint firstItem="FcX-1b-ErW" firstAttribute="trailing" secondItem="yTz-Ty-c3a" secondAttribute="trailing" id="LCz-Fa-Jpw"/>
                             <constraint firstItem="VLW-Yn-EPd" firstAttribute="centerY" secondItem="QrY-RJ-oVd" secondAttribute="centerY" constant="30" id="LTS-QS-wbh"/>
                             <constraint firstItem="Bdv-id-CmI" firstAttribute="leading" secondItem="Gql-mR-kwb" secondAttribute="leading" id="LkY-OR-hbu"/>
                             <constraint firstItem="cnf-xz-UEu" firstAttribute="leading" secondItem="QrY-RJ-oVd" secondAttribute="leading" constant="30" id="QKw-0w-p4o"/>
+                            <constraint firstAttribute="trailing" secondItem="SZh-FL-fnm" secondAttribute="trailing" id="R31-0d-n9B"/>
                             <constraint firstItem="FNY-ON-7Jk" firstAttribute="top" secondItem="Gql-mR-kwb" secondAttribute="bottom" id="ULF-Df-gST"/>
+                            <constraint firstItem="SZh-FL-fnm" firstAttribute="leading" secondItem="QrY-RJ-oVd" secondAttribute="leading" id="Uh4-mY-Xg3"/>
                             <constraint firstAttribute="trailing" secondItem="Gql-mR-kwb" secondAttribute="trailing" constant="80" id="Xno-9G-Vz1"/>
                             <constraint firstItem="yTz-Ty-c3a" firstAttribute="top" secondItem="FcX-1b-ErW" secondAttribute="bottom" id="YCK-rl-bOH"/>
                             <constraint firstItem="gQN-Pm-Mkn" firstAttribute="trailing" secondItem="Bdv-id-CmI" secondAttribute="trailing" id="axs-bN-lNY"/>
@@ -890,14 +905,17 @@
                             <constraint firstAttribute="trailing" secondItem="3He-yH-EkW" secondAttribute="trailing" constant="10" id="qwE-q9-elh"/>
                             <constraint firstItem="fUU-kt-0rO" firstAttribute="trailing" secondItem="FNY-ON-7Jk" secondAttribute="trailing" id="ron-ad-EWN"/>
                             <constraint firstItem="FNY-ON-7Jk" firstAttribute="top" secondItem="fUU-kt-0rO" secondAttribute="bottom" id="uHg-Ex-GER"/>
+                            <constraint firstItem="SZh-FL-fnm" firstAttribute="top" secondItem="QrY-RJ-oVd" secondAttribute="top" id="xmc-a0-MXj"/>
                             <constraint firstItem="Bdv-id-CmI" firstAttribute="centerY" secondItem="Gql-mR-kwb" secondAttribute="centerY" id="zkf-i3-01Y"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="avgLegendLabel" destination="gQN-Pm-Mkn" id="2gP-RG-pVc"/>
                         <outlet property="heatLegend" destination="Gql-mR-kwb" id="mzi-tq-h23"/>
+                        <outlet property="loadingScreen" destination="SZh-FL-fnm" id="xyF-fO-AIM"/>
                         <outlet property="maxLegendLabel" destination="FcX-1b-ErW" id="i8Z-P6-C9n"/>
                         <outlet property="minLegendLabel" destination="fUU-kt-0rO" id="Ief-90-MyD"/>
+                        <outlet property="progressIndicator" destination="rPH-ZR-e29" id="7zi-nO-ZmU"/>
                         <outlet property="tableView" destination="peU-2q-DkM" id="9cZ-ST-Fdw"/>
                         <outlet property="yAxisLabel" destination="VLW-Yn-EPd" id="L8i-fv-Pfb"/>
                     </connections>

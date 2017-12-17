@@ -12,6 +12,7 @@ class HeatMapViewController: NSViewController {
 
     private let viewModel:HeatMapViewModel = HeatMapViewModel()
     private let numFormatter = NumberFormatter()
+    private let loadingView = NSView()
     
     @IBOutlet weak var tableView: NSTableView! {
         didSet {
@@ -34,8 +35,14 @@ class HeatMapViewController: NSViewController {
     @IBOutlet weak var avgLegendLabel: NSTextField!
     @IBOutlet weak var minLegendLabel: NSTextField!
     
+    
+    @IBOutlet weak var loadingScreen: NSView!
+    @IBOutlet weak var progressIndicator: NSProgressIndicator!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoadingScreen()
         viewModel.delegate = self
         viewModel.loadData()
         prepareUI()
@@ -76,6 +83,7 @@ extension HeatMapViewController: NSTableViewDataSource, NSTableViewDelegate {
 
 extension HeatMapViewController: HeatMapViewModelDelegate {
     func didFinishLoadingData() {
+        hideLoadingScreen()
         tableView.delegate = self
         tableView.dataSource = self
         prepareLegend()
@@ -83,6 +91,19 @@ extension HeatMapViewController: HeatMapViewModelDelegate {
 }
 
 extension HeatMapViewController {
+    
+    private func showLoadingScreen(){
+        loadingScreen.wantsLayer = true
+        loadingScreen.alphaValue = 0.9
+        loadingScreen.layer?.backgroundColor = CGColor.white
+        progressIndicator.startAnimation(self)
+    }
+    
+    private func hideLoadingScreen() {
+        progressIndicator.stopAnimation(self)
+        loadingScreen.removeFromSuperview()
+    }
+    
     private func prepareUI() {
         prepareFormatter()
         configureLabels()
